@@ -80,31 +80,31 @@ public class Builder extends Creature {
 	@Override
 	public void doCommandAction() {
 		super.doCommandAction();
-		if (commandNum == 1) {//tower
+		if(commandNum == 1) {//tower
 			build(new Tower(handler, objectiveX / 32 * 32, objectiveY / 32 * 32, team));
 		}
-		if (commandNum == 2) {//barracks
+		if(commandNum == 2) {//barracks
 			build(new Barracks(handler, objectiveX / 32 * 32, objectiveY / 32 * 32, team));
 		}
-		if (commandNum == 3) {//mage tower
+		if(commandNum == 3) {//mage tower
 			build(new MageTower(handler, objectiveX / 32 * 32, objectiveY / 32 * 32, team));
 		}
 	}
 	
 	public void build(Building building) {
-		if (handler.getEntityManager().getUnitCollision(building, this) != null) {//second parameter allows builder to build on himself
+		if(handler.getEntityManager().getUnitCollision(building, this) != null) {//second parameter allows builder to build on himself
 			
 			return;
 		}
 		
-		if (handler.getWorld().getTile((int) (building.getBounds().getX() + building.getX()) / 32, (int) (building.getBounds().getY() + building.getY()) / 32).isSolid()) {
+		if(handler.getWorld().getTile((int) (building.getBounds().getX() + building.getX()) / 32, (int) (building.getBounds().getY() + building.getY()) / 32).isSolid()) {
 			System.out.println("Trying to build " + building.getType() + " on solid tiles.");
 			objective = false;
 			defcon = 5;
 			return;
 		}
 		
-		if (handler.getWorld().getTile((int) (building.getBounds().getX() + building.getBounds().getWidth() + building.getX()) / 32, (int) (building.getBounds().getY() + building.getBounds().getHeight() + building.getY()) / 32).isSolid()) {
+		if(handler.getWorld().getTile((int) (building.getBounds().getX() + building.getBounds().getWidth() + building.getX()) / 32, (int) (building.getBounds().getY() + building.getBounds().getHeight() + building.getY()) / 32).isSolid()) {
 			System.out.println("Trying to build " + building.getType() + " on solid tiles.");
 			objective = false;
 			defcon = 5;
@@ -113,7 +113,7 @@ public class Builder extends Creature {
 		
 		int gold = handler.getWorld().getGold();
 		
-		if (gold > building.getCost()) {
+		if(gold > building.getCost()) {
 			handler.getEntityManager().addToAddList(building);
 			handler.getWorld().setGold(handler.getWorld().getGold() - building.getCost());
 		} else {
@@ -127,7 +127,7 @@ public class Builder extends Creature {
 	@Override
 	public void render(Graphics g) {
 		super.render(g);
-		if (alive) {
+		if(alive) {
 			g.drawImage(getCurrentAnimationFrame(), (int) (x - handler.getGameCamera().getxOffset()), (int) (y - handler.getGameCamera().getyOffset()), width, height, null);
 		} else {
 			g.drawImage(animDead.getCurrentFrame(), (int) (x - handler.getGameCamera().getxOffset()), (int) (y - handler.getGameCamera().getyOffset()), width, height, null);

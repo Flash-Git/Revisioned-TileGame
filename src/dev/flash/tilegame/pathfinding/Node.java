@@ -1,6 +1,7 @@
 package dev.flash.tilegame.pathfinding;
 
 public class Node {
+	
 	private int x, y;
 	Node parent;
 	static Node dest;
@@ -27,14 +28,14 @@ public class Node {
 	public float calcG() {
 		float p;
 		float cost;
-		if (parent == null) {//only reaches this if there's no path
+		if(parent == null) {//only reaches this if there's no path
 			return 0;
 		}
 		
 		p = parent.calcG();
 		//p=0;
 		
-		if (parent.getX() != x && parent.getY() != y) {//is it diagonal
+		if(parent.getX() != x && parent.getY() != y) {//is it diagonal
 			cost = 14;
 		} else {
 			cost = 10;

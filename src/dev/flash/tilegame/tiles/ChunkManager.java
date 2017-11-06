@@ -17,7 +17,7 @@ public class ChunkManager {
 	}
 	
 	public void renderChunks(Graphics g) {
-		for (Chunk chunk : chunks) {
+		for(Chunk chunk : chunks) {
 			chunk.render(g);
 		}
 	}
@@ -31,8 +31,8 @@ public class ChunkManager {
 	}
 	
 	public Chunk getChunk(int x, int y) {
-		for (Chunk chunk : chunks) {
-			if (chunk.getX() <= x && chunk.getX() + chunk.getWidth() > x && chunk.getY() <= y && chunk.getY() + chunk.getHeight() > y) {
+		for(Chunk chunk : chunks) {
+			if(chunk.getX() <= x && chunk.getX() + chunk.getWidth() > x && chunk.getY() <= y && chunk.getY() + chunk.getHeight() > y) {
 				return chunk;
 			}
 		}
@@ -41,7 +41,7 @@ public class ChunkManager {
 	}
 	
 	public ArrayList<Entity> getEntitiesFromNeighbours(Chunk chunk) {
-		if (chunk == null) {
+		if(chunk == null) {
 			System.err.println("chunk is null at getEntitiesFromNeighbours");
 		}
 		int x = chunk.getX();
@@ -53,22 +53,22 @@ public class ChunkManager {
 		Chunk newChunk;
 		
 		newChunk = getChunk(x - (32 * 5), y);
-		if (newChunk != null) {
+		if(newChunk != null) {
 			entities.addAll(newChunk.getEntities());
 //			newChunk.selected=true;
 		}
 		newChunk = getChunk(x + (32 * 5), y);
-		if (newChunk != null) {
+		if(newChunk != null) {
 			entities.addAll(newChunk.getEntities());
 //			newChunk.selected=true;
 		}
 		newChunk = getChunk(x, y - (32 * 5));
-		if (newChunk != null) {
+		if(newChunk != null) {
 			entities.addAll(newChunk.getEntities());
 //			newChunk.selected=true;
 		}
 		newChunk = getChunk(x, y + (32 * 5));
-		if (newChunk != null) {
+		if(newChunk != null) {
 			entities.addAll(newChunk.getEntities());
 //			newChunk.selected=true;
 		}

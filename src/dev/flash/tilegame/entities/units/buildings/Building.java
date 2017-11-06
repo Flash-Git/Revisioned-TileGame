@@ -50,7 +50,7 @@ public abstract class Building extends Unit {
 	
 	@Override
 	public void render(Graphics g) {
-		if (alive) {
+		if(alive) {
 			//health bars
 			g.setColor(Color.RED);
 			g.fillRect((int) (x - handler.getGameCamera().getxOffset()), (int) (y - 5 - handler.getGameCamera().getyOffset()),
@@ -61,7 +61,7 @@ public abstract class Building extends Unit {
 			g.drawString("Lvl " + Integer.toString(level), (int) (x - handler.getGameCamera().getxOffset()), (int) (y - 7 - handler.getGameCamera().getyOffset()));
 			
 			//Target
-			if (targetIsUnit) {
+			if(targetIsUnit) {
 				g.setColor(Color.RED);
 				g.fillRect((int) (getCenterX() - 2 - handler.getGameCamera().getxOffset()), (int) (y - 16 - handler.getGameCamera().getyOffset()), 4, 8);
 			}
@@ -78,7 +78,7 @@ public abstract class Building extends Unit {
 	
 	@Override
 	protected void animate() {
-		if (alive) {
+		if(alive) {
 			animIdle.tick();
 		} else {
 			animDead.tick();
@@ -102,7 +102,7 @@ public abstract class Building extends Unit {
 	}
 	
 	protected BufferedImage getCurrentAnimationFrame() {
-		if (alive) {
+		if(alive) {
 			return animIdle.getCurrentFrame();
 		}
 		return animDead.getCurrentFrame();

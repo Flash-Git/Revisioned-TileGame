@@ -7,6 +7,7 @@ import dev.flash.tilegame.ui.UserInterface;
 import java.awt.*;
 
 public abstract class State {
+	
 	protected UserInterface userInterface;
 	
 	protected InputManager inputManager;

@@ -45,7 +45,7 @@ public abstract class Creature extends Unit {
 		
 		bounds.setBounds(8, 16, 16, 16);
 		
-		if (team == 2) {
+		if(team == 2) {
 			objective = true;
 			objectiveX = WORLD3_GOALX;
 			objectiveY = WORLD3_GOALY;
@@ -92,7 +92,7 @@ public abstract class Creature extends Unit {
 	
 	@Override
 	public void render(Graphics g) {
-		if (alive) {
+		if(alive) {
 			//health bar
 			g.setColor(Color.RED);
 			g.fillRect((int) (x - handler.getGameCamera().getxOffset()), (int) (y - 5 - handler.getGameCamera().getyOffset()), (int) ((this.health * this.width) / this.maxHealth), 3);
@@ -106,7 +106,7 @@ public abstract class Creature extends Unit {
 		}
 		
 		g.setColor(Color.WHITE);
-		for (Node n : path) {
+		for(Node n : path) {
 			g.drawString(Integer.toString((int) n.getWeight()), n.getX() * 32 + 12 - (int) handler.getGameCamera().getxOffset(), n.getY() * 32 + 12 - (int) handler.getGameCamera().getyOffset());
 		}
 	}
@@ -118,7 +118,7 @@ public abstract class Creature extends Unit {
 	//ANIMATION
 	@Override
 	protected void animate() {
-		if (alive) {
+		if(alive) {
 			//animIdle.tick();
 			animUp.tick();
 			animDown.tick();
@@ -130,13 +130,13 @@ public abstract class Creature extends Unit {
 	}
 	
 	protected BufferedImage getCurrentAnimationFrame() {
-		if (vX < -0.5 * speed) {
+		if(vX < -0.5 * speed) {
 			return animLeft.getCurrentFrame();
-		} else if (vX > 0.5 * speed) {
+		} else if(vX > 0.5 * speed) {
 			return animRight.getCurrentFrame();
-		} else if (vY < -0.5 * speed) {
+		} else if(vY < -0.5 * speed) {
 			return animUp.getCurrentFrame();
-		} else if (vY > 0.5 * speed) {
+		} else if(vY > 0.5 * speed) {
 			return animDown.getCurrentFrame();
 		} else {
 			return animDown.getCurrentFrame();
@@ -155,15 +155,15 @@ public abstract class Creature extends Unit {
 		int x = getCenterX() + tX * 32;
 		int y = getCenterY() + tY * 32;
 		
-		if (TileChecker.outOfMap(x, y)) {
+		if(TileChecker.outOfMap(x, y)) {
 			return;
 		}
 		
-		if (TileChecker.isSolid(x, y)) {
+		if(TileChecker.isSolid(x, y)) {
 			return;
 		}
 		
-		if (TileChecker.unitsOnTile(x, y, this)) {
+		if(TileChecker.unitsOnTile(x, y, this)) {
 			return;
 		}
 //		setObjectiveX(x);
@@ -178,13 +178,13 @@ public abstract class Creature extends Unit {
 	@Override
 	public void command(double delta) {//TODO
 		pathTo(delta, getObjectiveX(), getObjectiveY(), defcon);
-		if (defcon > 4) {
-			if (getDistanceToGoal() < 0.2) {
+		if(defcon > 4) {
+			if(getDistanceToGoal() < 0.2) {
 				doCommandAction();
 				return;
 			}
 		}
-		if (getDistanceToGoal() < 1) {
+		if(getDistanceToGoal() < 1) {
 			doCommandAction();
 			
 		}
@@ -193,7 +193,7 @@ public abstract class Creature extends Unit {
 	//CLASS METHODS
 	
 	public void gainExp(int exp) {
-		if (expToLvl - (exp + this.exp) > 0) {
+		if(expToLvl - (exp + this.exp) > 0) {
 			this.exp += exp;
 			return;
 		} else {
@@ -212,7 +212,7 @@ public abstract class Creature extends Unit {
 		super.die();
 		pushWeight = 0;
 		path.clear();
-		if (team == 1) {
+		if(team == 1) {
 			return;
 		} else {
 			handler.getWorld().setGold(handler.getWorld().getGold() + 4 + level);

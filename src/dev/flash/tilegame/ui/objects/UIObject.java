@@ -42,7 +42,7 @@ public abstract class UIObject {
 	}
 	
 	public void onMousePressed(MouseEvent e, int button) {
-		if (hovering) {
+		if(hovering) {
 			hovering = false;
 			pressed(button);
 		}
@@ -52,7 +52,7 @@ public abstract class UIObject {
 	
 	
 	public void onMouseRelease(MouseEvent e, int button) {
-		if (hovering) {
+		if(hovering) {
 			onClick(button);
 		}
 		//onMouseMove(e);

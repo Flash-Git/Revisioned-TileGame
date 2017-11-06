@@ -24,8 +24,8 @@ public class RuleManager {
 	}
 	
 	public Rule getRule(String name) {
-		for (Rule r : rules) {
-			if (r.getName().equals(name)) {
+		for(Rule r : rules) {
+			if(r.getName().equals(name)) {
 				return r;
 			}
 		}

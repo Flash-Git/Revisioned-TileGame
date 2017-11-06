@@ -24,8 +24,8 @@ public class TileManager {
 	}
 	
 	public Tile getTile(int x, int y) {
-		for (Tile t : tiles) {
-			if (t.getX() == x && t.getY() == y) {
+		for(Tile t : tiles) {
+			if(t.getX() == x && t.getY() == y) {
 				return t;
 			}
 		}

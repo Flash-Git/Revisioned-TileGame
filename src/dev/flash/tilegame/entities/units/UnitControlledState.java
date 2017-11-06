@@ -30,34 +30,34 @@ public class UnitControlledState extends UnitState {
 	
 	private void setVelocity() {
 		double speed = unit.getSpeed();
-		if (up) {
+		if(up) {
 			unit.setvY(-speed);//this.speed;
-		} else if (down) {
+		} else if(down) {
 			unit.setvY(speed);//this.speed;
 		} else {
 			unit.setvY(0);
 		}
-		if (left) {
+		if(left) {
 			unit.setvX(-speed);//this.speed;
-		} else if (right) {
+		} else if(right) {
 			unit.setvX(speed);//this.speed;
 		} else {
 			unit.setvX(0);
 		}
 		
-		if (up && left) {
+		if(up && left) {
 			unit.setvX(-speed * 0.74);//this.speed;
 			unit.setvY(-speed * 0.74);//this.speed;
 		}
-		if (up && right) {
+		if(up && right) {
 			unit.setvX(speed * 0.74);//this.speed;
 			unit.setvY(-speed * 0.74);//this.speed;
 		}
-		if (down && left) {
+		if(down && left) {
 			unit.setvX(-speed * 0.74);//this.speed;
 			unit.setvY(speed * 0.74);//this.speed
 		}
-		if (down && right) {
+		if(down && right) {
 			unit.setvX(speed * 0.74);//this.speed;
 			unit.setvY(speed * 0.74);//this.speed;
 		}

@@ -41,8 +41,8 @@ public class TileChecker {
 	}
 	
 	public static boolean buildingsOnTile(int x, int y, Unit[] unit) {
-		if (handler.getEntityManager().getBuildingsOnTile(x, y, unit).size() != 0) {
-			for (Entity e : handler.getEntityManager().getBuildingsOnTile(x, y, unit)) {
+		if(handler.getEntityManager().getBuildingsOnTile(x, y, unit).size() != 0) {
+			for(Entity e : handler.getEntityManager().getBuildingsOnTile(x, y, unit)) {
 				System.out.println(e.getType());
 			}
 			return true;

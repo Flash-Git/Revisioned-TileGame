@@ -8,6 +8,7 @@ import dev.flash.tilegame.entities.units.creatures.Zombie;
 import dev.flash.tilegame.timers.Timer;
 
 public class Wave {
+	
 	private int type;
 	private int eNum;
 	private int eCount;
@@ -27,9 +28,9 @@ public class Wave {
 	
 	public void tick() {
 		
-		if (spawnTimer.isDone()) {
-			if (eCount < eNum) {
-				if (type < 5) {
+		if(spawnTimer.isDone()) {
+			if(eCount < eNum) {
+				if(type < 5) {
 					spawnCreature(new Mudcrab(handler, 0, 0, 2), 5 * 32, 5 * 32);
 					spawnCreature(new Mudcrab(handler, 0, 0, 2), 5 * 32, 8 * 32);
 					spawnCreature(new Mudcrab(handler, 0, 0, 2), 45 * 32, 5 * 32);
@@ -38,7 +39,7 @@ public class Wave {
 					spawnCreature(new Mudcrab(handler, 0, 0, 2), 26 * 32, 25 * 32);
 					return;
 				}
-				if (type < 10) {
+				if(type < 10) {
 					spawnCreature(new Zombie(handler, 0, 0, 2), 5 * 32, 5 * 32);
 					spawnCreature(new Zombie(handler, 0, 0, 2), 45 * 32, 5 * 32);
 					spawnCreature(new Zombie(handler, 0, 0, 2), 25 * 32, 25 * 32);
@@ -48,7 +49,7 @@ public class Wave {
 				spawnCreature(new Wizard(handler, 0, 0, 2), 45 * 32, 5 * 32);
 				spawnCreature(new Wizard(handler, 0, 0, 2), 25 * 32, 25 * 32);
 				
-			} else if (endTimer.isActive() == false) {
+			} else if(endTimer.isActive() == false) {
 				endTimer.setDelay(15000);
 				endTimer.activate();
 			}
@@ -58,7 +59,7 @@ public class Wave {
 	
 	public void spawnCreature(Creature creature, int x, int y) {
 		
-		if (handler.getEntityManager().getEntitiesOnTile(x, y).isEmpty()) {
+		if(handler.getEntityManager().getEntitiesOnTile(x, y).isEmpty()) {
 			creature.setX(x);
 			creature.setY(y);
 			handler.getEntityManager().addToAddList(creature);

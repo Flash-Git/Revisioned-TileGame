@@ -16,14 +16,14 @@ public class GameCamera {
 	}
 	
 	public void checkBlankSpace() {
-		if (xOffset < 0) {
+		if(xOffset < 0) {
 			xOffset = 0;
-		} else if (xOffset > handler.getWorld().getWidth() * Tile.TILEWIDTH - handler.getWidth()) {
+		} else if(xOffset > handler.getWorld().getWidth() * Tile.TILEWIDTH - handler.getWidth()) {
 			xOffset = handler.getWorld().getWidth() * Tile.TILEWIDTH - handler.getWidth();
 		}
-		if (yOffset < 0) {
+		if(yOffset < 0) {
 			yOffset = 0;
-		} else if (yOffset > handler.getWorld().getHeight() * Tile.TILEWIDTH - handler.getHeight()) {
+		} else if(yOffset > handler.getWorld().getHeight() * Tile.TILEWIDTH - handler.getHeight()) {
 			yOffset = handler.getWorld().getHeight() * Tile.TILEHEIGHT - handler.getHeight();
 		}
 	}

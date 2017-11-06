@@ -7,6 +7,7 @@ import dev.flash.tilegame.entities.units.buildings.Building;
 import dev.flash.tilegame.entities.units.creatures.Creature;
 
 public interface EntityVisitor {
+	
 	void visit(Creature entity);
 	
 	void visit(Building entity);

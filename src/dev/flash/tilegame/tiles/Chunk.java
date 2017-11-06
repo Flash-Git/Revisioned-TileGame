@@ -30,18 +30,18 @@ public class Chunk {
 	public void render(Graphics g) {
 		Random random = new Random();
 		int rand = random.nextInt(5);
-		if (rand < 1)
+		if(rand < 1)
 			g.setColor(Color.BLACK);
-		if (rand == 2)
+		if(rand == 2)
 			g.setColor(Color.BLUE);
-		if (rand == 3)
+		if(rand == 3)
 			g.setColor(Color.RED);
-		if (rand == 4)
+		if(rand == 4)
 			g.setColor(Color.YELLOW);
 		
-		if (selected) {
+		if(selected) {
 			g.fillRect(x - (int) handler.getGameCamera().getxOffset(), y - (int) handler.getGameCamera().getyOffset(), width, height);
-			if (selectTimer.isDone()) {
+			if(selectTimer.isDone()) {
 				selected = false;
 			}
 		}

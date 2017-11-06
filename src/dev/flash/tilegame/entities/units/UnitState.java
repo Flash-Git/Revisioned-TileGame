@@ -3,6 +3,7 @@ package dev.flash.tilegame.entities.units;
 import dev.flash.tilegame.Handler;
 
 public abstract class UnitState {
+	
 	protected Handler handler;
 	protected Unit unit;
 	

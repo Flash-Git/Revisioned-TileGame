@@ -48,8 +48,8 @@ public class SpriteViewerWorld {//massive mess but works flawlessly
 		getInputTimer.tick(delta);
 		useInputTimer.tick(delta);
 		useInput();
-		if (play) {
-			if (timer.isDone()) {
+		if(play) {
+			if(timer.isDone()) {
 				nextFrame();
 			}
 		}
@@ -86,22 +86,22 @@ public class SpriteViewerWorld {//massive mess but works flawlessly
 	}
 	
 	public void changeBColor() {
-		if (color.equals(Color.gray)) {
+		if(color.equals(Color.gray)) {
 			color = Color.DARK_GRAY;
 			return;
 		}
-		if (color.equals(Color.DARK_GRAY)) {
+		if(color.equals(Color.DARK_GRAY)) {
 			color = Color.white;
 			return;
 		}
-		if (color.equals(Color.white)) {
+		if(color.equals(Color.white)) {
 			color = Color.gray;
 			return;
 		}
 	}
 	
 	public void nextSprite() {
-		if (iterator < sprites.size() - 1) {
+		if(iterator < sprites.size() - 1) {
 			sprite = sprites.get(iterator += 1);
 		} else {
 			sprite = sprites.get(iterator = 0);
@@ -110,7 +110,7 @@ public class SpriteViewerWorld {//massive mess but works flawlessly
 	}
 	
 	public void lastSprite() {
-		if (iterator > 0) {
+		if(iterator > 0) {
 			sprite = sprites.get(iterator -= 1);
 		} else {
 			sprite = sprites.get(iterator = sprites.size() - 1);
@@ -119,7 +119,7 @@ public class SpriteViewerWorld {//massive mess but works flawlessly
 	}
 	
 	public void nextFrame() {
-		if (frame < sprite.getLength() - 1) {
+		if(frame < sprite.getLength() - 1) {
 			frame = frame + 1;
 		} else {
 			frame = 0;
@@ -127,7 +127,7 @@ public class SpriteViewerWorld {//massive mess but works flawlessly
 	}
 	
 	public void lastFrame() {
-		if (frame > 0) {
+		if(frame > 0) {
 			frame = frame - 1;
 		} else {
 			frame = sprite.getLength() - 1;
@@ -145,42 +145,42 @@ public class SpriteViewerWorld {//massive mess but works flawlessly
 	}
 	
 	private void useInput() {
-		if (left) {
-			if (useInputTimer.isDone()) {
+		if(left) {
+			if(useInputTimer.isDone()) {
 				lastFrame();
 			}
 		}
 		
-		if (right) {
-			if (useInputTimer.isDone()) {
+		if(right) {
+			if(useInputTimer.isDone()) {
 				nextFrame();
 			}
 		}
 	}
 	
 	private void getInput() {
-		if (handler.getKeyManager().left) {
+		if(handler.getKeyManager().left) {
 			left = true;
 			play = false;
-			if (useInputTimer.isDone()) {//prevents commands getting skipped
+			if(useInputTimer.isDone()) {//prevents commands getting skipped
 				lastFrame();
 			}
 		} else {
 			left = false;
 		}
 		
-		if (handler.getKeyManager().right) {
+		if(handler.getKeyManager().right) {
 			right = true;
 			play = false;
-			if (useInputTimer.isDone()) {//prevents commands getting skipped
+			if(useInputTimer.isDone()) {//prevents commands getting skipped
 				nextFrame();
 			}
 		} else {
 			right = false;
 		}
 		
-		if (getInputTimer.isDone()) {
-			if (handler.getKeyManager().space) {
+		if(getInputTimer.isDone()) {
+			if(handler.getKeyManager().space) {
 				play = !play;
 			}
 		}

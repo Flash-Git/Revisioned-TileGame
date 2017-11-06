@@ -32,7 +32,7 @@ public class UIRectangleContainer extends UIObject {
 	
 	@Override
 	public void tick() {
-		for (UIObject o : objects) {
+		for(UIObject o : objects) {
 			o.tick();
 		}
 		
@@ -40,7 +40,7 @@ public class UIRectangleContainer extends UIObject {
 	
 	@Override
 	public void render(Graphics g) {
-		if (hovering) {
+		if(hovering) {
 			g.setColor(hoverColor);
 			g.fillRect((int) x, (int) y, width, height);
 			
@@ -48,23 +48,23 @@ public class UIRectangleContainer extends UIObject {
 			g.setColor(noHoverColor);
 			g.fillRect((int) x, (int) y, width, height);
 		}
-		for (UIObject o : objects) {
+		for(UIObject o : objects) {
 			o.render(g);
 		}
 	}
 	
 	public void onMouseMove(MouseEvent e) {
-		if (bounds.contains(e.getX(), e.getY())) {
-			if (hovering == false) {
+		if(bounds.contains(e.getX(), e.getY())) {
+			if(hovering == false) {
 				oldCursor = handler.getMouseManager().getUIManager().getActiveCursor();
 			}
 			hovering = true;
-			for (UIObject o : objects) {
+			for(UIObject o : objects) {
 				o.onMouseMove(e);
 			}
 			handler.getMouseManager().getUIManager().setActiveCursor(handler.getUserInterface().getDefaultCursor());
 		} else {
-			if (hovering == true) {
+			if(hovering == true) {
 				handler.getMouseManager().getUIManager().setActiveCursor(oldCursor);
 			}
 			hovering = false;
@@ -73,16 +73,16 @@ public class UIRectangleContainer extends UIObject {
 	}
 	
 	public void onMousePressed(MouseEvent e, int button) {
-		if (hovering) {
-			for (UIObject o : objects) {
+		if(hovering) {
+			for(UIObject o : objects) {
 				o.onMousePressed(e, button);
 			}
 		}
 	}
 	
 	public void onMouseRelease(MouseEvent e, int button) {
-		if (hovering) {
-			for (UIObject o : objects) {
+		if(hovering) {
+			for(UIObject o : objects) {
 				o.onMouseRelease(e, button);
 			}
 		}
@@ -117,7 +117,7 @@ public class UIRectangleContainer extends UIObject {
 	}
 	
 	public void setPortraitObj(UIImageButton portraitObj) {
-		if (this.portraitObj == null) {
+		if(this.portraitObj == null) {
 			objects.add(portraitObj);
 			portraitObj.setImages(portrait);
 		} else {

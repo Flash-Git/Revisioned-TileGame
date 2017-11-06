@@ -15,6 +15,7 @@ import dev.flash.tilegame.worlds.World;
 import dev.flash.tilegame.worlds.WorldEditor;
 
 public class Handler {
+	
 	private Game game;
 	private World world;
 	private SpriteViewerWorld spriteViewerWorld;

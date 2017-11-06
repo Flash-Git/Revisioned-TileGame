@@ -26,7 +26,7 @@ public abstract class UserInterface {
 	}
 	
 	public void tick() {
-		if (updateUserInterface) {
+		if(updateUserInterface) {
 			currentUserInterface = nextUserInterface;
 			currentUserInterface.setUIManager(currentUserInterface.getUIManager());//refreshes mouse manager uiManager
 			updateUserInterface = false;
@@ -57,7 +57,7 @@ public abstract class UserInterface {
 	}
 	
 	public static void setUserInterface(UserInterface userInterface) {
-		if (currentUserInterface == null) {
+		if(currentUserInterface == null) {
 			currentUserInterface = userInterface;
 			currentUserInterface.setUIManager(currentUserInterface.getUIManager());//refreshes mouse manager uiManager
 		} else {

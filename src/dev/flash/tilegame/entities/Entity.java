@@ -110,13 +110,13 @@ public abstract class Entity {
 	
 	public void tick(double delta) {
 		//If entity has been alive longer than lifetime then kill, else, regen
-		if (alive) {
-			if (lifeTimer.isDone()) {
+		if(alive) {
+			if(lifeTimer.isDone()) {
 				die();
 			} else {
 				regenHealth();
 			}
-		} else if (deathTimer.getDelay() == 0 || deathTimer.isDone()) {
+		} else if(deathTimer.getDelay() == 0 || deathTimer.isDone()) {
 			//TODO it appears to keep ticking dead things, at least the timers
 			handler.getEntityManager().addToRemoveList(this);
 		}
@@ -135,9 +135,9 @@ public abstract class Entity {
 	
 	//HEALTH REGEN
 	protected void regenHealth() {
-		if (health < maxHealth) {
-			if ((int) health > 0) {//TODO
-				if (healthRegenTimer.isDone()) {
+		if(health < maxHealth) {
+			if((int) health > 0) {//TODO
+				if(healthRegenTimer.isDone()) {
 					modHealth(health + healthRegen / 5);//DIVIDED BY 5 BECAUSE IT IS APPLIED 5TIMES A SECOND
 				}
 			}
@@ -146,18 +146,18 @@ public abstract class Entity {
 	
 	//CHUNK HANDLING
 	protected void chunkHandling() {
-		if (chunk == null) {
+		if(chunk == null) {
 			chunk = handler.getChunkManager().getChunk(getCenterX(), getCenterY());
-			if (chunk != null) {
+			if(chunk != null) {
 				chunk.addEntity(this);
 			} else {
 				System.err.println("nullchunk after get method " + getCenterX() + " " + getCenterY());
 			}
 		}
-		if (!chunk.equals(handler.getChunkManager().getChunk(getCenterX(), getCenterY()))) {
+		if(!chunk.equals(handler.getChunkManager().getChunk(getCenterX(), getCenterY()))) {
 			chunk.removeEntity(this);
 			chunk = handler.getChunkManager().getChunk(getCenterX(), getCenterY());
-			if (chunk != null) {
+			if(chunk != null) {
 				chunk.addEntity(this);
 			} else {
 				System.err.println("nullchunk after get method " + getCenterX() + " " + getCenterY());
@@ -172,11 +172,11 @@ public abstract class Entity {
 	}
 	
 	public void modHealth(float health) {
-		if ((int) health <= 0) {
+		if((int) health <= 0) {
 			die();
 			this.health = 0;
 		} else {
-			if (health > maxHealth) {
+			if(health > maxHealth) {
 				this.health = maxHealth;
 			} else {
 				this.health = health;
@@ -185,7 +185,7 @@ public abstract class Entity {
 	}
 	
 	public void select() {
-		if (!selected) {
+		if(!selected) {
 			selected = true;
 			handler.getEntityManager().setSelected(this);
 		}

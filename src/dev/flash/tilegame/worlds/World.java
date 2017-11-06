@@ -78,8 +78,8 @@ public class World {
 		spawnY = Utils.parseInt(tokens[3]);
 		tiles = new int[width][height];
 		
-		for (int y = 0; y < height; y++) {
-			for (int x = 0; x < width; x++) {
+		for(int y = 0; y < height; y++) {
+			for(int x = 0; x < width; x++) {
 				tiles[x][y] = Utils.parseInt(tokens[(x + y * width) + 4]);
 				Tile t = getTile(x, y);
 				t.setX(x);
@@ -89,7 +89,7 @@ public class World {
 				allNodes.add(new Node(x, y, null));
 				System.out.println(t.getName() + " " + t.getX() + " " + t.getY());
 				
-				if (x % 5 == 0 && y % 5 == 0) {
+				if(x % 5 == 0 && y % 5 == 0) {
 					chunks.add(new Chunk(handler, x * Tile.TILEHEIGHT, y * Tile.TILEHEIGHT, 5 * Tile.TILEWIDTH, 5 * Tile.TILEHEIGHT));
 					System.out.println("Chunk " + x + ", " + y);
 				}
@@ -127,31 +127,30 @@ public class World {
 	
 	public void tick(double delta) {
 		Rule r = ruleManager.getRule("paused");
-		if (r.getBoolVar() == false) {
+		if(r.getBoolVar() == false) {
 			entityManager.tick(delta);
 			timerManager.tick(delta);
 //			//TODO temp
 			wave.tick();
-			if (wave.endTimer.isDone()) {
+			if(wave.endTimer.isDone()) {
 				waveIncr += 1;
 				wave = new Wave(handler, waveIncr, 3);
 			}
-			if (goldGen.isDone()) {
+			if(goldGen.isDone()) {
 				gold += 5;
 			}
 		} else {
 			timerManager.globalTick(delta);
 		}
 		getInput();
-		
 	}
 	
 	public Tile getTile(int x, int y) {
-		if (x < 0 || y < 0 || x >= width || y >= height) {
+		if(x < 0 || y < 0 || x >= width || y >= height) {
 			return Tile.grassTile;
 		}
 		Tile t = Tile.tiles[tiles[x][y]];
-		if (t == null) {
+		if(t == null) {
 			return Tile.grassTile;
 		}
 		return t;
@@ -163,8 +162,8 @@ public class World {
 		int xEnd = (int) Math.min(width, (handler.getGameCamera().getxOffset() + handler.getWidth()) / Tile.TILEWIDTH + 1);
 		int yStart = (int) Math.max(0, handler.getGameCamera().getyOffset() / Tile.TILEHEIGHT);
 		int yEnd = (int) Math.min(height, (handler.getGameCamera().getyOffset() + handler.getHeight()) / Tile.TILEHEIGHT + 1);
-		for (int y = yStart; y < yEnd; y++) {
-			for (int x = xStart; x < xEnd; x++) {
+		for(int y = yStart; y < yEnd; y++) {
+			for(int x = xStart; x < xEnd; x++) {
 				getTile(x, y).render(g, (int) (x * Tile.TILEWIDTH - handler.getGameCamera().getxOffset()), (int) (y * Tile.TILEHEIGHT - handler.getGameCamera().getyOffset()));
 			}
 		}
@@ -175,34 +174,34 @@ public class World {
 	
 	private void getInput() {
 		//moving camera
-		if (entityManager.getControlled() == null) {
+		if(entityManager.getControlled() == null) {
 			boolean up = handler.getKeyManager().up;
 			boolean down = handler.getKeyManager().down;
 			boolean left = handler.getKeyManager().left;
 			boolean right = handler.getKeyManager().right;
 			
 			int speed = 5;
-			if (up) {
+			if(up) {
 				handler.getGameCamera().move(0, -speed);
 			}
-			if (down) {
+			if(down) {
 				handler.getGameCamera().move(0, speed);
 			}
-			if (left) {
+			if(left) {
 				handler.getGameCamera().move(-speed, 0);
 			}
-			if (right) {
+			if(right) {
 				handler.getGameCamera().move(speed, 0);
 			}
 		}
 		
 		//keys
-		if (keyManager.c) {
+		if(keyManager.c) {
 			EntitySorter sorter = new EntitySorter();
-			for (Creature e : entityManager.getEntitySorter().creatures) {
+			for(Creature e : entityManager.getEntitySorter().creatures) {
 				e.accept(sorter);
 			}
-			for (Projectile e : entityManager.getEntitySorter().projectiles) {
+			for(Projectile e : entityManager.getEntitySorter().projectiles) {
 				e.accept(sorter);
 			}
 			entityManager.removeList(sorter.entities);
@@ -210,17 +209,17 @@ public class World {
 		
 		Rule r;
 		
-		if (keyManager.p) {
+		if(keyManager.p) {
 			r = ruleManager.getRule("paused");
 			r.swapBoolVar();
 		}
 		
-		if (keyManager.b) {
+		if(keyManager.b) {
 			r = ruleManager.getRule("bounds");
 			r.swapBoolVar();
 		}
 		
-		if (keyManager.e) {
+		if(keyManager.e) {
 			r = ruleManager.getRule("entity collision");
 			r.swapBoolVar();
 		}

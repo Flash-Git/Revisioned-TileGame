@@ -15,9 +15,9 @@ public class NewAStar {
 	private static final Comparator<Node> listCompF = new Comparator<Node>() {
 		@Override
 		public int compare(Node a, Node b) {
-			if (a.calcF() < b.calcF())
+			if(a.calcF() < b.calcF())
 				return -1;
-			else if (a.calcF() > b.calcF())
+			else if(a.calcF() > b.calcF())
 				return 1;
 			return 0;
 		}
@@ -27,9 +27,9 @@ public class NewAStar {
 	private static final Comparator<Node> listCompH = new Comparator<Node>() {
 		@Override
 		public int compare(Node a, Node b) {
-			if (a.calcH() < b.calcH())
+			if(a.calcH() < b.calcH())
 				return -1;
-			else if (a.calcH() > b.calcH())
+			else if(a.calcH() > b.calcH())
 				return 1;
 			return 0;
 		}
@@ -41,7 +41,7 @@ public class NewAStar {
 	public static void generatePath(Handler handler, ArrayList<Node> path, int tileX1, int tileY1, int tileX2, int tileY2, Unit e) {
 		
 		//reset static variables
-		for (Node n : World.allNodes) {
+		for(Node n : World.allNodes) {
 			n.setParent(null);
 			n.setWeight(0);
 		}
@@ -56,7 +56,7 @@ public class NewAStar {
 		path.clear();
 		
 		Node parent = containsNode(tileX1, tileY1, World.allNodes);//Node that points to the Node that led to it's creation //Initial Node
-		if (parent == null) {
+		if(parent == null) {
 			System.err.println("no node found on allNodes list at " + tileX1 + ", " + tileY1 + " for initial parent node");
 			return;
 		}
@@ -64,14 +64,14 @@ public class NewAStar {
 		
 		open.add(parent);//Adds our initial node to the open list (to check and get available children)
 		Node.dest = containsNode(tileX2, tileY2, World.allNodes);//static destination node
-		if (Node.dest == null) {
+		if(Node.dest == null) {
 			System.err.println("no node found on allNodes list at " + tileX2 + ", " + tileY2 + " for destination node");
 			return;
 		}
 		//Start of for loop
-		for (int q = 0; q < checkNum; ++q) {
+		for(int q = 0; q < checkNum; ++q) {
 			open.sort(listCompF);//Sorts open list by f cost
-			if (open.size() == 0) {//temp TODO
+			if(open.size() == 0) {//temp TODO
 				break;
 			}
 			
@@ -82,7 +82,7 @@ public class NewAStar {
 			
 			//TODO CRASH HERE WHEN PUTTING CREATURES OUT OF MAP
 			
-			if (n.getX() == Node.dest.getX() && n.getY() == Node.dest.getY()) {//if n is the target, exit the loop //might need switching up later
+			if(n.getX() == Node.dest.getX() && n.getY() == Node.dest.getY()) {//if n is the target, exit the loop //might need switching up later
 				break;
 			}
 			
@@ -98,45 +98,45 @@ public class NewAStar {
 			
 			
 			//Check Top
-			if (top = checkValid(handler, nX, nY - 1, e)) {
+			if(top = checkValid(handler, nX, nY - 1, e)) {
 				checkNode(handler, nX, nY - 1, n, open, closed, e);
 			}
 			
 			//Check Bot
-			if (bot = checkValid(handler, nX, nY + 1, e)) {
+			if(bot = checkValid(handler, nX, nY + 1, e)) {
 				checkNode(handler, nX, nY + 1, n, open, closed, e);
 			}
 			
 			//Check Left
-			if (left = checkValid(handler, nX - 1, nY, e)) {
+			if(left = checkValid(handler, nX - 1, nY, e)) {
 				checkNode(handler, nX - 1, nY, n, open, closed, e);
 			}
 			
 			//Check Right
-			if (right = checkValid(handler, nX + 1, nY, e)) {
+			if(right = checkValid(handler, nX + 1, nY, e)) {
 				checkNode(handler, nX + 1, nY, n, open, closed, e);
 			}
 			
-			if (top && left) {//Check Top Left
-				if (checkValid(handler, nX - 1, nY - 1, e)) {
+			if(top && left) {//Check Top Left
+				if(checkValid(handler, nX - 1, nY - 1, e)) {
 					checkNode(handler, nX - 1, nY - 1, n, open, closed, e);
 				}
 			}
 			
-			if (top && right) {//Check Top Right
-				if (checkValid(handler, nX + 1, nY - 1, e)) {
+			if(top && right) {//Check Top Right
+				if(checkValid(handler, nX + 1, nY - 1, e)) {
 					checkNode(handler, nX + 1, nY - 1, n, open, closed, e);
 				}
 			}
 			
-			if (bot && left) {//Check Bot Left
-				if (checkValid(handler, nX - 1, nY + 1, e)) {
+			if(bot && left) {//Check Bot Left
+				if(checkValid(handler, nX - 1, nY + 1, e)) {
 					checkNode(handler, nX - 1, nY + 1, n, open, closed, e);
 				}
 			}
 			
-			if (bot && right) {//Check Bot Right
-				if (checkValid(handler, nX + 1, nY + 1, e)) {
+			if(bot && right) {//Check Bot Right
+				if(checkValid(handler, nX + 1, nY + 1, e)) {
 					checkNode(handler, nX + 1, nY + 1, n, open, closed, e);
 				}
 			}
@@ -150,30 +150,30 @@ public class NewAStar {
 		open.clear();
 		open.add(n);//adds best Node to fresh open list
 		Node p = n.parent;
-		while (p != null) {//backtracks through the parent relationship until there are no more parents (starting position)
+		while(p != null) {//backtracks through the parent relationship until there are no more parents (starting position)
 			open.add(p);
 			p = p.parent;
 		}
 		
 		//reverse this new open list, adding each node to path
-		for (int i = open.size() - 1; i >= 0; --i) {//create the path
+		for(int i = open.size() - 1; i >= 0; --i) {//create the path
 			path.add(open.get(i));
 		}
 		path.remove(0);//remove starting position
 	}
 	
 	private static boolean checkValid(Handler handler, int x, int y, Unit e) {
-		if (TileChecker.outOfMap(x * 32, y * 32)) {
+		if(TileChecker.outOfMap(x * 32, y * 32)) {
 			return false;//if node is out of bounds
 		}
 		
 		
-		if (TileChecker.isSolid(x * 32, y * 32)) {
+		if(TileChecker.isSolid(x * 32, y * 32)) {
 			return false;
 		}
 		
-		for (Building building : handler.getEntityManager().getBuildingsOnTile(x * 32, y * 32)) {
-			if (building.getTeam() == e.getTeam()) {
+		for(Building building : handler.getEntityManager().getBuildingsOnTile(x * 32, y * 32)) {
+			if(building.getTeam() == e.getTeam()) {
 				return false;//can't kill friendly units to get passed
 			}
 		}
@@ -183,7 +183,7 @@ public class NewAStar {
 	//check the node, if it is an available Node, add it to open list
 	private static boolean checkNode(Handler handler, int x, int y, Node parent, ArrayList<Node> open, ArrayList<Node> closed, Unit e) {
 		
-		if (containsNode(x, y, closed) != null) {
+		if(containsNode(x, y, closed) != null) {
 			return false;//if node is in closed list
 		}
 		
@@ -201,8 +201,8 @@ public class NewAStar {
 //			}
 //		}
 		
-		if (oldNode != null) {//if this Node is already on open list
-			if (oldNode.calcG() > newNode.calcG()) {//if new Node has lower G cost, leave it's parent as is//TODO check if f or g is better here
+		if(oldNode != null) {//if this Node is already on open list
+			if(oldNode.calcG() > newNode.calcG()) {//if new Node has lower G cost, leave it's parent as is//TODO check if f or g is better here
 				oldNode.setParent(parent);//if new Node has higher G cost, change old Node's parent to that of the new one
 				return true;//don't add this new Node to open list (it's already on it)
 			}
@@ -214,8 +214,8 @@ public class NewAStar {
 	
 	//checks if a Node exists on the given list at x, y
 	public static Node containsNode(int x, int y, ArrayList<Node> list) {
-		for (Node n : list) {
-			if (n.getX() == x && n.getY() == y) {
+		for(Node n : list) {
+			if(n.getX() == x && n.getY() == y) {
 				return n;
 			}
 		}

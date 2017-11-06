@@ -10,6 +10,7 @@ import java.awt.*;
 import java.awt.image.BufferedImage;
 
 public abstract class Projectile extends Entity {
+	
 	protected static final int DEFAULT_WIDTH = 16;
 	protected static final int DEFAULT_HEIGHT = 16;
 	
@@ -125,7 +126,7 @@ public abstract class Projectile extends Entity {
 	@Override
 	public void tick(double delta) {
 		super.tick(delta);
-		if (!alive) {
+		if(!alive) {
 			return;
 		}
 		moveTowards(delta);
@@ -151,9 +152,9 @@ public abstract class Projectile extends Entity {
 	//COMBAT
 	
 	private void attack(Unit t) {
-		if (alive && t.isAlive()) {
+		if(alive && t.isAlive()) {
 			t.modHealth(t.getHealth() - this.damage);
-			if (!t.isAlive()) {
+			if(!t.isAlive()) {
 				shooter.onKill(t.getExpReward());
 			}
 		}
@@ -164,22 +165,22 @@ public abstract class Projectile extends Entity {
 		float tempY = (float) (y + vY * delta / 1000 * 60);
 		//averages seem to be about 3pixels, which is fine for all current collisions,
 		//if it gets bad, either switch to a vector system or lengthen the bounds
-		if (TileChecker.isSolid((int) tempX, (int) tempY)) {
+		if(TileChecker.isSolid((int) tempX, (int) tempY)) {
 			die();
 			return;
 		}
 		boolean collided = checkCollision();
 		x = tempX;
 		y = tempY;
-		if (collided == false) {
+		if(collided == false) {
 			checkCollision();
 		}
 	}
 	
 	protected boolean checkCollision() {//still not ideal for high speeds or fps drops
 		Unit collider = handler.getEntityManager().getUnitCollision(this);
-		if (collider != null) {
-			if (collider.isAlive() && team != collider.getTeam()) {
+		if(collider != null) {
+			if(collider.isAlive() && team != collider.getTeam()) {
 				attack(collider);
 				die();
 				return true;

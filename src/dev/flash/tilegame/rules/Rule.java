@@ -4,6 +4,7 @@ import dev.flash.tilegame.Handler;
 import dev.flash.tilegame.timers.Timer;
 
 public class Rule {
+	
 	protected Handler handler;
 	protected String name;
 	protected int intVar;
@@ -61,19 +62,19 @@ public class Rule {
 	}
 	
 	public void setIntVar(int i) {
-		if (ruleTimer.isDone()) {//TODO
+		if(ruleTimer.isDone()) {//TODO
 			intVar = i;
 		}
 	}
 	
 	public void setBoolVar(boolean b) {
-		if (ruleTimer.isDone()) {
+		if(ruleTimer.isDone()) {
 			boolVar = b;
 		}
 	}
 	
 	public void swapBoolVar() {
-		if (ruleTimer.isDone()) {
+		if(ruleTimer.isDone()) {
 			boolVar = !boolVar;
 		}
 	}

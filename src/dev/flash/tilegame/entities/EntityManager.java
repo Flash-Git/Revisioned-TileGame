@@ -29,9 +29,9 @@ public class EntityManager {
 	private Comparator<Entity> renderSorter = new Comparator<Entity>() {
 		@Override
 		public int compare(Entity a, Entity b) {
-			if (a.getY() + a.getHeight() < b.getY() + b.getHeight()) {
+			if(a.getY() + a.getHeight() < b.getY() + b.getHeight()) {
 				return -1;
-			} else if (a.getY() + a.getHeight() < b.getY() + b.getHeight()) {
+			} else if(a.getY() + a.getHeight() < b.getY() + b.getHeight()) {
 				return +1;
 			} else {
 				return 0;
@@ -50,41 +50,41 @@ public class EntityManager {
 	public void tick(double delta) {
 		entitySorter.clearAll();
 		
-		for (Entity e : entities) {
+		for(Entity e : entities) {
 			e.accept(entitySorter);
 		}
 		
-		for (Unit u : entitySorter.units) {
-			if (u.isAlive()) {
+		for(Unit u : entitySorter.units) {
+			if(u.isAlive()) {
 				
 				setTarget(u);
 			}
 		}
 		
-		for (Creature c : entitySorter.creatures) {
-			if (c.getPushWeight() > 0) {
+		for(Creature c : entitySorter.creatures) {
+			if(c.getPushWeight() > 0) {
 				push(delta, c);
 			}
 			c.tick(delta);
 		}
 		
-		for (Building b : entitySorter.buildings) {
+		for(Building b : entitySorter.buildings) {
 			b.tick(delta);
 		}
 		
-		for (Projectile p : entitySorter.projectiles) {
+		for(Projectile p : entitySorter.projectiles) {
 			p.tick(delta);
 		}
-		for (StaticEntity s : entitySorter.staticEntities) {
+		for(StaticEntity s : entitySorter.staticEntities) {
 			s.tick(delta);
 		}
 		
-		if (!toAdd.isEmpty()) {
+		if(!toAdd.isEmpty()) {
 			toAddEntities();
 			toAdd.clear();
 		}
 		
-		if (!toRemove.isEmpty()) {
+		if(!toRemove.isEmpty()) {
 			toRemoveEntities();
 			toRemove.clear();
 		}
@@ -98,38 +98,38 @@ public class EntityManager {
 		int windowHeight = handler.getHeight();
 		
 		//Only render entities on screen
-		for (Entity e : entities) {
-			if (e.getX() < xCamOffset - 64) {
+		for(Entity e : entities) {
+			if(e.getX() < xCamOffset - 64) {
 				continue;
 			}
-			if (e.getX() > windowWidth + xCamOffset + 64) {
+			if(e.getX() > windowWidth + xCamOffset + 64) {
 				continue;
 			}
-			if (e.getY() < yCamOffset - 64) {
+			if(e.getY() < yCamOffset - 64) {
 				continue;
 			}
-			if (e.getY() > windowHeight + yCamOffset + 64) {
+			if(e.getY() > windowHeight + yCamOffset + 64) {
 				continue;
 			}
 			
 			e.render(g);
 			
-			if (e.equals(selected)) {
-				if (e.team == 1) {
+			if(e.equals(selected)) {
+				if(e.team == 1) {
 					g.setColor(Color.GREEN);
 				} else {
 					g.setColor(Color.RED);
 				}
 				g.drawOval((int) (e.getX() - e.width / 2 - xCamOffset), (int) (e.getY() - e.height / 2 - yCamOffset), e.getWidth() * 2, e.getHeight() * 2);
 			}
-			if (e.equals(commanded)) {
+			if(e.equals(commanded)) {
 				g.setColor(Color.BLUE);
 				g.drawOval((int) (e.getX() - e.width / 2 - xCamOffset), (int) (e.getY() - e.height / 2 - yCamOffset), e.getWidth() * 2, e.getHeight() * 2);
 			}
 			Rule r = handler.getRuleManager().getRule("bounds");
-			if (r.getBoolVar() == false) {
+			if(r.getBoolVar() == false) {
 				continue;
-			} else if (r.getBoolVar() == true) {
+			} else if(r.getBoolVar() == true) {
 				
 				g.setColor(Color.blue);
 				
@@ -141,17 +141,17 @@ public class EntityManager {
 	private void push(double delta, Creature i) {//TODO Variables on movers is SO fucked, rethink them
 		EntitySorter sorter = new EntitySorter();
 		
-		for (Entity e : handler.getChunkManager().getEntitiesFromNeighbours(i.getChunk())) {
+		for(Entity e : handler.getChunkManager().getEntitiesFromNeighbours(i.getChunk())) {
 			e.accept(sorter);
 		}
-		for (Creature p : sorter.creatures) {
-			if (p.equals(i)) {
+		for(Creature p : sorter.creatures) {
+			if(p.equals(i)) {
 				continue;
 			}
-			if (i.getCollisionBounds(0, 0).intersects(p.getCollisionBounds(0, 0))) {
-				if (p.getCollisionBounds(0, 0).getCenterX() < i.getCollisionBounds(0, 0).getCenterX()) {
+			if(i.getCollisionBounds(0, 0).intersects(p.getCollisionBounds(0, 0))) {
+				if(p.getCollisionBounds(0, 0).getCenterX() < i.getCollisionBounds(0, 0).getCenterX()) {
 					p.setRelativeX(p.getRelativeX() - 3);
-				} else if (p.getCollisionBounds(0, 0).getCenterX() > i.getCollisionBounds(0, 0).getCenterX()) {
+				} else if(p.getCollisionBounds(0, 0).getCenterX() > i.getCollisionBounds(0, 0).getCenterX()) {
 					p.setRelativeX(p.getRelativeX() + 3);
 				}
 //					else{
@@ -159,9 +159,9 @@ public class EntityManager {
 //					p.move(delta, p.getX()+(rand.nextInt(3)-1)*delta/1000*60, p.getY());//TODO REDO THIS BS
 //				}
 				
-				if (p.getCollisionBounds(0, 0).getCenterY() < i.getCollisionBounds(0, 0).getCenterY()) {
+				if(p.getCollisionBounds(0, 0).getCenterY() < i.getCollisionBounds(0, 0).getCenterY()) {
 					p.setRelativeY(p.getRelativeY() - 3);
-				} else if (p.getCollisionBounds(0, 0).getCenterY() > i.getCollisionBounds(0, 0).getCenterY()) {
+				} else if(p.getCollisionBounds(0, 0).getCenterY() > i.getCollisionBounds(0, 0).getCenterY()) {
 					p.setRelativeY(p.getRelativeY() + 3);
 				}
 //				else{
@@ -174,7 +174,7 @@ public class EntityManager {
 	
 	private void setTarget(Unit t) {
 		Unit bestTarget;
-		if (t.hasNoTarget()) {
+		if(t.hasNoTarget()) {
 			bestTarget = null;
 		} else {
 			bestTarget = t.getTargetUnit();
@@ -183,18 +183,18 @@ public class EntityManager {
 		
 		Unit tempT;
 		
-		for (Unit e : entitySorter.units) {
-			if (e.equals(t)) {//Skips itself
+		for(Unit e : entitySorter.units) {
+			if(e.equals(t)) {//Skips itself
 				continue;
 			}
 			
 			tempT = e;
 			
-			if (!tempT.isAlive()) {
+			if(!tempT.isAlive()) {
 				continue;
 			}
 			
-			if (t.getTeam() == tempT.getTeam()) {//Skips same team
+			if(t.getTeam() == tempT.getTeam()) {//Skips same team
 				continue;
 			}
 			
@@ -203,7 +203,7 @@ public class EntityManager {
 			
 			//Distance in tiles
 			float distance = (float) Math.sqrt(Math.pow(((int) tempT.getX() / 32 - t.getX() / 32), 2) + Math.pow(((int) tempT.getY() / 32 - t.getY() / 32), 2));
-			if (distance < t.getDetectionRange() && distance < lowestDistance) {
+			if(distance < t.getDetectionRange() && distance < lowestDistance) {
 				lowestDistance = (int) distance;
 				bestTarget = tempT;//changing this to a possibleTarget as well as switching bestTarget to Creature changes functionality unexpectedly
 			}
@@ -211,7 +211,7 @@ public class EntityManager {
 //		if((bestTarget==null||!bestTarget.isAlive())){//if c is hostile and no target is in range, move towards the map goal
 //			
 //		}
-		if (bestTarget != null && bestTarget.isAlive()) {
+		if(bestTarget != null && bestTarget.isAlive()) {
 			t.setTargetUnit(bestTarget);
 			return;
 		}
@@ -219,26 +219,26 @@ public class EntityManager {
 	}
 	
 	public void removeList(ArrayList<Entity> entities) {//TODO
-		for (Entity e : entities) {
+		for(Entity e : entities) {
 			addToRemoveList(e);
 		}
 	}
 	
 	public void killEntities(ArrayList<Entity> list) {
-		for (Entity e : list) {
+		for(Entity e : list) {
 			e.die();
 		}
 	}
 	
 	public void sortEntitiesOnTile(EntitySorter sorter, int x, int y) {
-		for (Entity e : getEntitiesOnTile(x, y)) {
+		for(Entity e : getEntitiesOnTile(x, y)) {
 			e.accept(sorter);
 		}
 	}
 	
 	public void sortEntitiesOnTile(EntitySorter sorter, int x, int y, Entity skip) {
-		for (Entity e : getEntitiesOnTile(x, y)) {
-			if (skip.equals(e)) {
+		for(Entity e : getEntitiesOnTile(x, y)) {
+			if(skip.equals(e)) {
 				continue;
 			}
 			e.accept(sorter);
@@ -247,9 +247,9 @@ public class EntityManager {
 	
 	public void sortEntitiesOnTile(EntitySorter sorter, int x, int y, Entity[] skip) {
 		outerloop:
-		for (Entity e : getEntitiesOnTile(x, y)) {
-			for (int i = 0; i < skip.length; i++) {
-				if (skip[i].equals(e)) {
+		for(Entity e : getEntitiesOnTile(x, y)) {
+			for(int i = 0; i < skip.length; i++) {
+				if(skip[i].equals(e)) {
 					continue outerloop;
 				}
 			}
@@ -303,8 +303,8 @@ public class EntityManager {
 		ArrayList<Entity> list = new ArrayList<Entity>();
 		Rectangle rect = new Rectangle(x / 32 * 32, y / 32 * 32, 32, 32);
 		
-		for (Entity e : handler.getChunkManager().getEntitiesFromNeighbours(handler.getChunkManager().getChunk(x, y))) {
-			if (e.getCollisionBounds(0, 0).intersects(rect)) {
+		for(Entity e : handler.getChunkManager().getEntitiesFromNeighbours(handler.getChunkManager().getChunk(x, y))) {
+			if(e.getCollisionBounds(0, 0).intersects(rect)) {
 				list.add(e);
 			}
 		}
@@ -314,8 +314,8 @@ public class EntityManager {
 	public ArrayList<Entity> getEntitiesInRect(int x, int y, int width, int height) {
 		ArrayList<Entity> list = new ArrayList<Entity>();
 		Rectangle rect = new Rectangle(x, y, width, height);
-		for (Entity e : handler.getChunkManager().getEntitiesFromNeighbours(handler.getChunkManager().getChunk(x, y))) {
-			if (e.getCollisionBounds(0, 0).intersects(rect)) {
+		for(Entity e : handler.getChunkManager().getEntitiesFromNeighbours(handler.getChunkManager().getChunk(x, y))) {
+			if(e.getCollisionBounds(0, 0).intersects(rect)) {
 				list.add(e);
 			}
 		}
@@ -325,28 +325,28 @@ public class EntityManager {
 	public Unit getUnitCollision(Entity entity) {
 		EntitySorter sorter = new EntitySorter();
 		
-		if (entity.getChunk() == null) {//this entity has not been ticked(probably not added to world yet, ex:being build)
-			for (Entity e : handler.getChunkManager().getEntitiesFromNeighbours(handler.getChunkManager().getChunk(entity.getCenterX(), entity.getCenterY()))) {
-				if (entity.equals(e)) {
+		if(entity.getChunk() == null) {//this entity has not been ticked(probably not added to world yet, ex:being build)
+			for(Entity e : handler.getChunkManager().getEntitiesFromNeighbours(handler.getChunkManager().getChunk(entity.getCenterX(), entity.getCenterY()))) {
+				if(entity.equals(e)) {
 					continue;
 				}
 				e.accept(sorter);
 			}
 		} else {
-			for (Entity e : handler.getChunkManager().getEntitiesFromNeighbours(entity.getChunk())) {
-				if (entity.equals(e)) {
+			for(Entity e : handler.getChunkManager().getEntitiesFromNeighbours(entity.getChunk())) {
+				if(entity.equals(e)) {
 					continue;
 				}
 				e.accept(sorter);
 			}
 		}
-		for (Unit e : sorter.units) {
+		for(Unit e : sorter.units) {
 			
 			//System.out.println(entity.getCenterX()+" "+entity.getCenterY()+" "+e.getCenterX()+" "+e.getCenterY());//TODO
 //			if(Utils.rectCollides(entity.getCollisionBounds(0, 0),e.getCollisionBounds(0, 0))){
 //				return e;
 //			}
-			if (entity.getCollisionBounds(0, 0).intersects(e.getCollisionBounds(0, 0))) {
+			if(entity.getCollisionBounds(0, 0).intersects(e.getCollisionBounds(0, 0))) {
 				return e;
 			}
 		}
@@ -356,24 +356,24 @@ public class EntityManager {
 	public Unit getUnitCollision(Entity entity, Entity skipped) {
 		EntitySorter sorter = new EntitySorter();
 		Chunk chunk;
-		if (entity.getChunk() == null) {//this entity has not been ticked(probably not added to world yet, ex:being build)
+		if(entity.getChunk() == null) {//this entity has not been ticked(probably not added to world yet, ex:being build)
 			chunk = handler.getChunkManager().getChunk(entity.getCenterX(), entity.getCenterY());
-			for (Entity e : handler.getChunkManager().getEntitiesFromNeighbours(chunk)) {
+			for(Entity e : handler.getChunkManager().getEntitiesFromNeighbours(chunk)) {
 				e.accept(sorter);
 			}
 		} else {
-			for (Entity e : handler.getChunkManager().getEntitiesFromNeighbours(entity.getChunk())) {
+			for(Entity e : handler.getChunkManager().getEntitiesFromNeighbours(entity.getChunk())) {
 				e.accept(sorter);
 			}
 		}
-		for (Unit e : sorter.units) {
-			if (entity.equals(e)) {
+		for(Unit e : sorter.units) {
+			if(entity.equals(e)) {
 				continue;
 			}
-			if (skipped.equals(e)) {
+			if(skipped.equals(e)) {
 				continue;
 			}
-			if (entity.getCollisionBounds(0, 0).intersects(e.getCollisionBounds(0, 0))) {
+			if(entity.getCollisionBounds(0, 0).intersects(e.getCollisionBounds(0, 0))) {
 				return e;
 			}
 		}
@@ -381,14 +381,14 @@ public class EntityManager {
 	}
 	
 	private void toAddEntities() {
-		for (Entity e : toAdd) {
+		for(Entity e : toAdd) {
 			addEntity(e);
 			e.initialise();//TODO if normal initialisation doesn't prove to be effective
 		}
 	}
 	
 	private void toRemoveEntities() {
-		for (Entity e : toRemove) {
+		for(Entity e : toRemove) {
 			removeEntity(e);
 		}
 	}
@@ -406,10 +406,10 @@ public class EntityManager {
 	}
 	
 	public void removeEntity(Entity e) {
-		if (e.isPersistent()) {
+		if(e.isPersistent()) {
 			return;
 		}
-		if (e.isPersistent() == false) {
+		if(e.isPersistent() == false) {
 			e.die();
 			e.getChunk().removeEntity(e);
 			handler.getTimerManager().addToRemoveList(e.getTimers());
@@ -434,12 +434,12 @@ public class EntityManager {
 	}
 	
 	public void setControlled(Unit unit) {
-		if (controlled == null) {
+		if(controlled == null) {
 			controlled = unit;
 		} else {
 			controlled.setControlled(false);
 		}
-		if (unit == null) {
+		if(unit == null) {
 			controlled = null;
 			return;
 		}
@@ -453,7 +453,7 @@ public class EntityManager {
 	}
 	
 	public void setCommanded(Unit unit) {
-		if (commanded == null) {
+		if(commanded == null) {
 			commanded = unit;
 		} else {
 			commanded.setCommanded(false);
@@ -467,7 +467,7 @@ public class EntityManager {
 	}
 	
 	public void setSelected(Entity entity) {
-		if (selected == null) {
+		if(selected == null) {
 			selected = entity;
 		} else {
 			selected.setSelected(false);

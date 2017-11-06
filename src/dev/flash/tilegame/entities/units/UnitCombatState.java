@@ -5,6 +5,7 @@ import dev.flash.tilegame.tiles.Tile;
 import java.awt.geom.Line2D;
 
 public class UnitCombatState extends UnitState {
+	
 	public UnitCombatState(Unit unit) {
 		super(unit);
 		
@@ -17,12 +18,12 @@ public class UnitCombatState extends UnitState {
 	}
 	
 	private void catchError() {
-		if (!unit.isRanged() && !unit.isMelee()) {
+		if(!unit.isRanged() && !unit.isMelee()) {
 			System.out.println("peaceful unit in combat state");
 			return;
 		}
 		
-		if (unit.hasNoTarget()) {
+		if(unit.hasNoTarget()) {
 			System.out.println("no target");
 			return;
 		}
@@ -37,8 +38,8 @@ public class UnitCombatState extends UnitState {
 		
 		boolean mobile = unit.isMobile();
 		
-		if (unit.getAttackRange() < distanceToTarget) {
-			if (!mobile) {
+		if(unit.getAttackRange() < distanceToTarget) {
+			if(!mobile) {
 				return;
 			} else {
 				unit.pathTo(delta, targetX, targetY, 3);
@@ -46,8 +47,8 @@ public class UnitCombatState extends UnitState {
 			}
 		} else {
 			Line2D.Double lOS = unit.getlOS();
-			if (unit.intersectsWithSolids(lOS)) {
-				if (!mobile) {
+			if(unit.intersectsWithSolids(lOS)) {
+				if(!mobile) {
 					return;
 				} else {
 					unit.pathTo(delta, targetX, targetY, 3);

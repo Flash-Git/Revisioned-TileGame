@@ -18,6 +18,7 @@ import java.awt.image.BufferStrategy;
 
 
 public class Game implements Runnable {
+	
 	//display handles JFrame
 	private Display display;
 	private BufferStrategy bs;
@@ -102,7 +103,7 @@ public class Game implements Runnable {
 	
 	private void tick(double delta) {
 		keyManager.updateKeys();//TODO this is more of a failsafe than actually necessary
-		if (State.getState() != null) {
+		if(State.getState() != null) {
 			State.getState().tick(delta);
 		}
 	}
@@ -110,7 +111,7 @@ public class Game implements Runnable {
 	private void render() {
 		//Draw frames before displaying them
 		bs = display.getCanvas().getBufferStrategy();
-		if (bs == null) {
+		if(bs == null) {
 			display.getCanvas().createBufferStrategy(2);//amount of stored up frames ready before pushing to screen
 			return;
 		}
@@ -120,7 +121,7 @@ public class Game implements Runnable {
 		g.clearRect(0, 0, width, height);
 		
 		//Draw Here
-		if (State.getState() != null) {
+		if(State.getState() != null) {
 			State.getState().render(g);
 		}
 		
@@ -144,14 +145,14 @@ public class Game implements Runnable {
 		long deltaNow;
 		
 		
-		while (running) {
+		while(running) {
 			now = System.nanoTime();
 			timer += now - lastTime;
 			delta += (now - lastTime) / timePerTick;
 			
 			lastTime = now;
 			
-			if (delta >= 1) {//this should avoid lost or gained frames from speeding up or slowing down the game
+			if(delta >= 1) {//this should avoid lost or gained frames from speeding up or slowing down the game
 				deltaNow = System.nanoTime();
 				deltaTime = deltaNow - deltaLastTime;
 				
@@ -163,7 +164,7 @@ public class Game implements Runnable {
 				deltaLastTime = deltaNow;
 			}
 			
-			if (timer >= 1000000000) {
+			if(timer >= 1000000000) {
 				System.out.println("Ticks and Frames: " + ticks);
 				fps = ticks;
 				ticks = 0;
@@ -175,7 +176,7 @@ public class Game implements Runnable {
 	
 	//Creates the thread
 	public synchronized void start() {
-		if (running == true) {
+		if(running == true) {
 			return;
 		}
 		running = true;
@@ -185,13 +186,13 @@ public class Game implements Runnable {
 	
 	//Stops the code cleanly
 	public synchronized void stop() {
-		if (!running) {
+		if(!running) {
 			return;
 		}
 		running = false;
 		try {
 			thread.join();
-		} catch (InterruptedException e) {
+		} catch(InterruptedException e) {
 			e.printStackTrace();
 		}
 	}

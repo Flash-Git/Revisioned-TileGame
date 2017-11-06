@@ -78,13 +78,13 @@ public class Barracks extends Building {
 	@Override
 	public void doCommandAction() {
 		super.doCommandAction();
-		if (commandNum == 1) {//Wizard
+		if(commandNum == 1) {//Wizard
 			spawnCreature(new Wizard(handler, getCenterX(), getCenterY() + height, team));
 			objective = false;
 			defcon = 5;
 			return;
 		}
-		if (commandNum == 2) {//Builder
+		if(commandNum == 2) {//Builder
 			spawnCreature(new Builder(handler, getCenterX(), getCenterY() + height, team));
 			objective = false;
 			defcon = 5;

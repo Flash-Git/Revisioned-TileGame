@@ -26,45 +26,45 @@ public class UIManager {
 	}
 	
 	public void tick() {
-		if (updateActiveCursor) {
+		if(updateActiveCursor) {
 			activeCursor = nextActiveCursor;
 			updateActiveCursor = false;
 		}
-		if (updateUICommandRectangle) {
+		if(updateUICommandRectangle) {
 			removeObject(uiCommandRectangle);
 			uiCommandRectangle = nextUICommandRectangle;
 			addObject(uiCommandRectangle);
 			updateUICommandRectangle = false;
 		}
-		for (UIObject o : objects) {
+		for(UIObject o : objects) {
 			o.tick();
 		}
 		activeCursor.tick();
 	}
 	
 	public void render(Graphics g) {
-		for (UIObject o : objects) {
+		for(UIObject o : objects) {
 			o.render(g);
 		}
 		activeCursor.render(g);
 	}
 	
 	public void onMouseMove(MouseEvent e) {
-		for (UIObject o : objects) {
+		for(UIObject o : objects) {
 			o.onMouseMove(e);
 		}
 		activeCursor.onMouseMove(e);
 	}
 	
 	public void onMousePressed(MouseEvent e, int button) {
-		for (UIObject o : objects) {
+		for(UIObject o : objects) {
 			o.onMousePressed(e, button);
 		}
 		activeCursor.onMousePressed(e, button);
 	}
 	
 	public void onMouseRelease(MouseEvent e, int button) {
-		for (UIObject o : objects) {
+		for(UIObject o : objects) {
 			o.onMouseRelease(e, button);
 		}
 		activeCursor.onMouseRelease(e, button);
@@ -99,7 +99,7 @@ public class UIManager {
 	}
 	
 	public void setActiveCursor(UIObject activeCursor) {
-		if (this.activeCursor == null) {
+		if(this.activeCursor == null) {
 			this.activeCursor = activeCursor;
 		} else {
 			updateActiveCursor = true;
@@ -112,7 +112,7 @@ public class UIManager {
 	}
 	
 	public void setUICommandBox(UIObject uiCommandRectangle) {
-		if (this.uiCommandRectangle == null) {
+		if(this.uiCommandRectangle == null) {
 			addObject(uiCommandRectangle);
 			this.uiCommandRectangle = uiCommandRectangle;
 		} else {

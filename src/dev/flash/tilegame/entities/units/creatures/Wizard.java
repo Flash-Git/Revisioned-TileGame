@@ -76,7 +76,7 @@ public class Wizard extends Creature {
 	@Override
 	public void render(Graphics g) {
 		super.render(g);
-		if (alive) {
+		if(alive) {
 			g.drawImage(getCurrentAnimationFrame(), (int) (x - handler.getGameCamera().getxOffset()), (int) (y - handler.getGameCamera().getyOffset()), width, height, null);
 		} else {
 			g.drawImage(animDead.getCurrentFrame(), (int) (x - handler.getGameCamera().getxOffset()), (int) (y - handler.getGameCamera().getyOffset()), width, height, null);

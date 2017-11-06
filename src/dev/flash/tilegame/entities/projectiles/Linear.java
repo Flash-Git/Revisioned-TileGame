@@ -9,6 +9,7 @@ import java.awt.*;
 import java.awt.image.BufferedImage;
 
 public class Linear extends Projectile {
+	
 	//Animations
 	protected Animation animHori;
 	protected Animation animVert;
@@ -41,7 +42,7 @@ public class Linear extends Projectile {
 	
 	@Override
 	protected BufferedImage getCurrentAnimationFrame() {
-		if (Math.abs(getvX()) > Math.abs(vY)) {
+		if(Math.abs(getvX()) > Math.abs(vY)) {
 			return animHori.getCurrentFrame();
 		} else {
 			return animVert.getCurrentFrame();

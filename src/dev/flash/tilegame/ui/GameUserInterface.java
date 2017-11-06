@@ -45,12 +45,12 @@ public class GameUserInterface extends UserInterface {
 		combatCursor = new UIMouseCursor(handler, 0, 0, 16, 16, Assets.selection_cross_red, "combatCursor", new ClickListener() {
 			@Override
 			public void onClick(int button) {
-				if (button == 1) {
+				if(button == 1) {
 				}
-				if (button == 3) {
+				if(button == 3) {
 					Unit u = handler.getEntityManager().getCommanded();
-					if (u != null) {
-						if (u.isAlive()) {
+					if(u != null) {
+						if(u.isAlive()) {
 							u.doCommand(0);
 						}
 					}
@@ -59,11 +59,11 @@ public class GameUserInterface extends UserInterface {
 			
 			@Override
 			public void pressed(int button) {
-				if (button == 1) {
+				if(button == 1) {
 					//System.out.println("combatCursor pressed() Left");
 					
 					Unit u = handler.getEntityManager().getCommanded();
-					if (u.isAlive()) {
+					if(u.isAlive()) {
 						int x = (int) (handler.getMouseManager().getMouseX() + handler.getGameCamera().getxOffset());
 						int y = (int) (handler.getMouseManager().getMouseY() + handler.getGameCamera().getyOffset());
 						u.attackCoords(x + 8, y + 8);//why do i need to add this? TODO
@@ -81,22 +81,22 @@ public class GameUserInterface extends UserInterface {
 		commandCursor = new UIMouseCursor(handler, 0, 0, 32, 32, Assets.selection_cross_green, "commandCursor", new ClickListener() {
 			@Override
 			public void onClick(int button) {
-				if (button == 1) {
+				if(button == 1) {
 					Unit u = handler.getEntityManager().getCommanded();
-					if (u.isAlive()) {
+					if(u.isAlive()) {
 						u.doCommand(commandCursor.getCommandNum());
 					}
-					if (u.isControlled()) {
+					if(u.isControlled()) {
 						uiManager.setActiveCursor(combatCursor);
 						return;
 					}
 					uiManager.setActiveCursor(selectionCursor);
 					return;
 				}
-				if (button == 3) {
+				if(button == 3) {
 					Unit u = handler.getEntityManager().getCommanded();
-					if (u != null) {
-						if (u.isAlive()) {
+					if(u != null) {
+						if(u.isAlive()) {
 							u.doCommand(0);
 						}
 					}
@@ -117,21 +117,21 @@ public class GameUserInterface extends UserInterface {
 		selectionCursor = new UIMouseCursor(handler, 0, 0, 32, 32, Assets.selection_cross_grey, "selectionCursor", new ClickListener() {
 			@Override
 			public void onClick(int button) {
-				if (button == 1) {
+				if(button == 1) {
 					int x = (int) (selectionCursor.getX() + handler.getGameCamera().getxOffset());
 					int y = (int) (selectionCursor.getY() + handler.getGameCamera().getyOffset());
 					int width = selectionCursor.getWidth();
 					int height = selectionCursor.getHeight();
 					
-					for (Entity e : handler.getEntityManager().getEntitiesInRect(x, y, width, height)) {
+					for(Entity e : handler.getEntityManager().getEntitiesInRect(x, y, width, height)) {
 						e.select();
 						
 					}
 				}
-				if (button == 3) {
+				if(button == 3) {
 					Unit u = handler.getEntityManager().getCommanded();
-					if (u != null) {
-						if (u.isAlive()) {
+					if(u != null) {
+						if(u.isAlive()) {
 							u.doCommand(0);
 						}
 					}
@@ -233,7 +233,7 @@ public class GameUserInterface extends UserInterface {
 				String detRange = "null";
 				String speed = "null";
 				String attSpeed = "null";
-				if (e instanceof Unit) {
+				if(e instanceof Unit) {
 					Unit c = (Unit) e;
 					hp = Double.toString((double) c.getHealth());
 					dmg = Double.toString((double) c.getDamage());
@@ -243,14 +243,14 @@ public class GameUserInterface extends UserInterface {
 					speed = Double.toString((double) c.getSpeed());
 					attSpeed = Double.toString((double) c.getAttackSpeed());
 				}
-				if (e instanceof Projectile) {
+				if(e instanceof Projectile) {
 					Projectile p = (Projectile) e;
 					hp = Double.toString((double) p.getHealth());
 					dmg = Double.toString((double) p.getDamage());
 					speed = Double.toString((double) p.getSpeed());
 				}
 				
-				if (this.getTexts().isEmpty()) {
+				if(this.getTexts().isEmpty()) {
 					this.centerText = false;
 					this.addText(new Text("Health: " + hp, 8, 32, Color.BLACK, 12));
 					this.addText(new Text("Damage: " + dmg, 8, 64, Color.BLACK, 12));
@@ -260,37 +260,37 @@ public class GameUserInterface extends UserInterface {
 					this.addText(new Text("Speed: " + speed, this.getWidth() / 2 + 8, 64, Color.BLACK, 12));
 					this.addText(new Text("Attack Speed: " + attSpeed, this.getWidth() / 2 + 8, 96, Color.BLACK, 12));
 				} else {
-					if (hp.length() > 4) {
+					if(hp.length() > 4) {
 						hp = hp.substring(0, 4);
 					}
 					this.getTexts().get(0).setString("Health: " + hp);
 					
-					if (dmg.length() > 4) {
+					if(dmg.length() > 4) {
 						dmg = dmg.substring(0, 4);
 					}
 					this.getTexts().get(1).setString("Damage: " + dmg);
 					
-					if (hpRegen.length() > 4) {
+					if(hpRegen.length() > 4) {
 						hpRegen = hpRegen.substring(0, 4);
 					}
 					this.getTexts().get(2).setString("Health Regen: " + hpRegen);
 					
-					if (attRange.length() > 4) {
+					if(attRange.length() > 4) {
 						attRange = attRange.substring(0, 4);
 					}
 					this.getTexts().get(3).setString("Attack Range: " + attRange);
 					
-					if (detRange.length() > 4) {
+					if(detRange.length() > 4) {
 						detRange = detRange.substring(0, 4);
 					}
 					this.getTexts().get(4).setString("Detection Range: " + detRange);
 					
-					if (speed.length() > 4) {
+					if(speed.length() > 4) {
 						speed = speed.substring(0, 4);
 					}
 					this.getTexts().get(5).setString("Speed: " + speed);
 					
-					if (attSpeed.length() > 4) {
+					if(attSpeed.length() > 4) {
 						attSpeed = attSpeed.substring(0, 4);
 					}
 					this.getTexts().get(6).setString("Attack Speed: " + attSpeed);
@@ -301,12 +301,12 @@ public class GameUserInterface extends UserInterface {
 		hudUIManager.addObject(new UITextRectangle(handler, 16, handler.getHeight() - 166 - 16, 256, 16, Color.GRAY, Color.GRAY) {
 			@Override
 			public void doTick() {
-				if (this.getTexts().isEmpty()) {
+				if(this.getTexts().isEmpty()) {
 					this.addText(new Text("", this.getWidth() / 2, this.getHeight() / 2 + 16, Color.BLACK, 32));
 				}
-				for (Text t : this.getTexts()) {
+				for(Text t : this.getTexts()) {
 					Entity e = handler.getEntityManager().getSelected();
-					if (e != null) {
+					if(e != null) {
 						t.setString(e.getType());
 					}
 				}
@@ -331,11 +331,11 @@ public class GameUserInterface extends UserInterface {
 		uiDefaultCommandBox.addObject(new UIImageButton(handler, handler.getWidth() / 2 - 256 + 53 + 16 + 128, handler.getHeight() - 80 - 32, 64, 64, Assets.selection_cross_green, new ClickListener() {
 			@Override
 			public void onClick(int button) {
-				if (uiDefaultCommandBox.getOldCursor() == selectionCursor) {
+				if(uiDefaultCommandBox.getOldCursor() == selectionCursor) {
 					uiDefaultCommandBox.setOldCursor(combatCursor);
-				} else if (uiDefaultCommandBox.getOldCursor() == combatCursor) {
+				} else if(uiDefaultCommandBox.getOldCursor() == combatCursor) {
 					uiDefaultCommandBox.setOldCursor(commandCursor);
-				} else if (uiDefaultCommandBox.getOldCursor() == commandCursor) {
+				} else if(uiDefaultCommandBox.getOldCursor() == commandCursor) {
 					uiDefaultCommandBox.setOldCursor(selectionCursor);
 				}
 			}
@@ -360,10 +360,10 @@ public class GameUserInterface extends UserInterface {
 		uiDefaultCommandBox.addObject(new UITextRectangle(handler, handler.getWidth() / 2 - 256 + 53 + 16 + 384, handler.getHeight() - 80 - 32, 64, 64, Color.GRAY, Color.GRAY) {
 			@Override
 			public void doTick() {
-				if (this.getTexts().isEmpty()) {
+				if(this.getTexts().isEmpty()) {
 					this.addText(new Text("", this.getWidth() / 2, this.getHeight() / 2, Color.BLACK, 16));
 				}
-				for (Text t : this.getTexts()) {
+				for(Text t : this.getTexts()) {
 					t.setString(uiManager.getActiveCursor().getName());
 				}
 			}
@@ -389,11 +389,11 @@ public class GameUserInterface extends UserInterface {
 			@Override
 			public void onClick(int button) {
 				System.out.println(uiManager.getActiveCursor().getName());
-				if (uiManager.getActiveCursor() == selectionCursor) {
+				if(uiManager.getActiveCursor() == selectionCursor) {
 					uiManager.setActiveCursor(combatCursor);
-				} else if (uiManager.getActiveCursor() == combatCursor) {
+				} else if(uiManager.getActiveCursor() == combatCursor) {
 					uiManager.setActiveCursor(commandCursor);
-				} else if (uiManager.getActiveCursor() == commandCursor) {
+				} else if(uiManager.getActiveCursor() == commandCursor) {
 					uiManager.setActiveCursor(selectionCursor);
 				}
 			}
@@ -418,10 +418,10 @@ public class GameUserInterface extends UserInterface {
 		uiDevCommandBox.addObject(new UITextRectangle(handler, handler.getWidth() / 2 - 256 + 53 + 16 + 384, handler.getHeight() - 80 - 32, 64, 64, Color.GRAY, Color.GRAY) {
 			@Override
 			public void doTick() {
-				if (this.getTexts().isEmpty()) {
+				if(this.getTexts().isEmpty()) {
 					this.addText(new Text("", this.getWidth() / 2, this.getHeight() / 2, Color.BLACK, 16));
 				}
-				for (Text t : this.getTexts()) {
+				for(Text t : this.getTexts()) {
 					t.setString(uiManager.getActiveCursor().getName());
 				}
 			}
@@ -436,7 +436,7 @@ public class GameUserInterface extends UserInterface {
 			public void onClick(int button) {
 				Unit u = handler.getEntityManager().getCommanded();
 				
-				if (!u.isControlled()) {
+				if(!u.isControlled()) {
 					handler.getEntityManager().setControlled(u);
 					
 					uiBuilderCommandBox.setOldCursor(combatCursor);
@@ -459,7 +459,7 @@ public class GameUserInterface extends UserInterface {
 			@Override
 			public void onClick(int button) {
 				Unit u = handler.getEntityManager().getCommanded();
-				if (u.isAlive()) {
+				if(u.isAlive()) {
 					u.doCommand(1);
 				}
 				
@@ -474,10 +474,10 @@ public class GameUserInterface extends UserInterface {
 		uiBarracksCommandBox.addObject(new UITextRectangle(handler, handler.getWidth() / 2 - 256 + 53 + 16 + 96, handler.getHeight() - 80 - 32 + 64, 64, 32, Color.GRAY, Color.GRAY) {
 			@Override
 			public void doTick() {
-				if (this.getTexts().isEmpty()) {
+				if(this.getTexts().isEmpty()) {
 					this.addText(new Text("", this.getWidth() / 2, this.getHeight() / 2, Color.YELLOW, 22));
 				}
-				for (Text t : this.getTexts()) {
+				for(Text t : this.getTexts()) {
 					t.setString("75");
 				}
 			}
@@ -488,7 +488,7 @@ public class GameUserInterface extends UserInterface {
 			@Override
 			public void onClick(int button) {
 				Unit u = handler.getEntityManager().getCommanded();
-				if (u.isAlive()) {
+				if(u.isAlive()) {
 					u.doCommand(2);
 				}
 			}
@@ -502,10 +502,10 @@ public class GameUserInterface extends UserInterface {
 		uiBarracksCommandBox.addObject(new UITextRectangle(handler, handler.getWidth() / 2 - 256 + 53 + 16 + 192, handler.getHeight() - 80 - 32 + 64, 64, 32, Color.GRAY, Color.GRAY) {
 			@Override
 			public void doTick() {
-				if (this.getTexts().isEmpty()) {
+				if(this.getTexts().isEmpty()) {
 					this.addText(new Text("", this.getWidth() / 2, this.getHeight() / 2, Color.YELLOW, 22));
 				}
-				for (Text t : this.getTexts()) {
+				for(Text t : this.getTexts()) {
 					t.setString("100");
 				}
 			}
@@ -557,7 +557,7 @@ public class GameUserInterface extends UserInterface {
 			public void onClick(int button) {
 				Unit u = handler.getEntityManager().getCommanded();
 				
-				if (!u.isControlled()) {
+				if(!u.isControlled()) {
 					handler.getEntityManager().setControlled(u);
 					
 					uiBuilderCommandBox.setOldCursor(combatCursor);
@@ -580,7 +580,7 @@ public class GameUserInterface extends UserInterface {
 			@Override
 			public void onClick(int button) {
 				Unit u = handler.getEntityManager().getCommanded();
-				if (u.isAlive()) {
+				if(u.isAlive()) {
 					u.doCommand(1);
 				}
 				
@@ -595,10 +595,10 @@ public class GameUserInterface extends UserInterface {
 		uiBarracksCommandBox2.addObject(new UITextRectangle(handler, handler.getWidth() / 2 - 256 + 53 + 16 + 96, handler.getHeight() - 80 - 32 + 64, 64, 32, Color.GRAY, Color.GRAY) {
 			@Override
 			public void doTick() {
-				if (this.getTexts().isEmpty()) {
+				if(this.getTexts().isEmpty()) {
 					this.addText(new Text("", this.getWidth() / 2, this.getHeight() / 2, Color.YELLOW, 22));
 				}
-				for (Text t : this.getTexts()) {
+				for(Text t : this.getTexts()) {
 					t.setString("75");
 				}
 			}
@@ -659,7 +659,7 @@ public class GameUserInterface extends UserInterface {
 				
 				Unit u = handler.getEntityManager().getCommanded();
 				
-				if (!u.isControlled()) {
+				if(!u.isControlled()) {
 					handler.getEntityManager().setControlled(u);
 					
 					uiBuilderCommandBox.setOldCursor(combatCursor);
@@ -698,10 +698,10 @@ public class GameUserInterface extends UserInterface {
 		uiBuilderCommandBox.addObject(new UITextRectangle(handler, handler.getWidth() / 2 - 256 + 53 + 16 + 96, handler.getHeight() - 80 - 32 + 64, 64, 32, Color.GRAY, Color.GRAY) {
 			@Override
 			public void doTick() {
-				if (this.getTexts().isEmpty()) {
+				if(this.getTexts().isEmpty()) {
 					this.addText(new Text("", this.getWidth() / 2, this.getHeight() / 2, Color.YELLOW, 22));
 				}
-				for (Text t : this.getTexts()) {
+				for(Text t : this.getTexts()) {
 					t.setString("150");
 				}
 			}
@@ -725,10 +725,10 @@ public class GameUserInterface extends UserInterface {
 		uiBuilderCommandBox.addObject(new UITextRectangle(handler, handler.getWidth() / 2 - 256 + 53 + 16 + 192, handler.getHeight() - 80 - 32 + 64, 64, 32, Color.GRAY, Color.GRAY) {
 			@Override
 			public void doTick() {
-				if (this.getTexts().isEmpty()) {
+				if(this.getTexts().isEmpty()) {
 					this.addText(new Text("", this.getWidth() / 2, this.getHeight() / 2, Color.YELLOW, 22));
 				}
-				for (Text t : this.getTexts()) {
+				for(Text t : this.getTexts()) {
 					t.setString("250");
 				}
 			}
@@ -752,10 +752,10 @@ public class GameUserInterface extends UserInterface {
 		uiBuilderCommandBox.addObject(new UITextRectangle(handler, handler.getWidth() / 2 - 256 + 53 + 16 + 288, handler.getHeight() - 80 - 32 + 64, 64, 32, Color.GRAY, Color.GRAY) {
 			@Override
 			public void doTick() {
-				if (this.getTexts().isEmpty()) {
+				if(this.getTexts().isEmpty()) {
 					this.addText(new Text("", this.getWidth() / 2, this.getHeight() / 2, Color.YELLOW, 22));
 				}
-				for (Text t : this.getTexts()) {
+				for(Text t : this.getTexts()) {
 					t.setString("300");
 				}
 			}
@@ -778,10 +778,10 @@ public class GameUserInterface extends UserInterface {
 		uiBuilderCommandBox.addObject(new UITextRectangle(handler, handler.getWidth() / 2 - 256 + 53 + 16 + 384, handler.getHeight() - 80 - 32 + 64, 64, 32, Color.GRAY, Color.GRAY) {
 			@Override
 			public void doTick() {
-				if (this.getTexts().isEmpty()) {
+				if(this.getTexts().isEmpty()) {
 					this.addText(new Text("", this.getWidth() / 2, this.getHeight() / 2, Color.YELLOW, 22));
 				}
-				for (Text t : this.getTexts()) {
+				for(Text t : this.getTexts()) {
 					t.setString("200");
 				}
 			}
@@ -827,7 +827,7 @@ public class GameUserInterface extends UserInterface {
 				
 				Unit u = handler.getEntityManager().getCommanded();
 				
-				if (!u.isControlled()) {
+				if(!u.isControlled()) {
 					handler.getEntityManager().setControlled(u);
 					
 					uiBuilderCommandBox2.setOldCursor(combatCursor);
@@ -866,10 +866,10 @@ public class GameUserInterface extends UserInterface {
 		uiBuilderCommandBox2.addObject(new UITextRectangle(handler, handler.getWidth() / 2 - 256 + 53 + 16 + 96, handler.getHeight() - 80 - 32 + 64, 64, 32, Color.GRAY, Color.GRAY) {
 			@Override
 			public void doTick() {
-				if (this.getTexts().isEmpty()) {
+				if(this.getTexts().isEmpty()) {
 					this.addText(new Text("", this.getWidth() / 2, this.getHeight() / 2, Color.YELLOW, 22));
 				}
-				for (Text t : this.getTexts()) {
+				for(Text t : this.getTexts()) {
 					t.setString("150");
 				}
 			}
@@ -893,10 +893,10 @@ public class GameUserInterface extends UserInterface {
 		uiBuilderCommandBox2.addObject(new UITextRectangle(handler, handler.getWidth() / 2 - 256 + 53 + 16 + 192, handler.getHeight() - 80 - 32 + 64, 64, 32, Color.GRAY, Color.GRAY) {
 			@Override
 			public void doTick() {
-				if (this.getTexts().isEmpty()) {
+				if(this.getTexts().isEmpty()) {
 					this.addText(new Text("", this.getWidth() / 2, this.getHeight() / 2, Color.YELLOW, 22));
 				}
-				for (Text t : this.getTexts()) {
+				for(Text t : this.getTexts()) {
 					t.setString("250");
 				}
 			}
@@ -941,12 +941,12 @@ public class GameUserInterface extends UserInterface {
 		boxes.add(uiZombieCommandBox);
 		boxes.add(uiMudcrabCommandBox);
 		
-		for (UIRectangleContainer box : boxes) {
+		for(UIRectangleContainer box : boxes) {
 			ClickListener clicker = new ClickListener() {
 				@Override
 				public void onClick(int button) {
 					Unit u = handler.getEntityManager().getCommanded();
-					if (!u.isControlled()) {
+					if(!u.isControlled()) {
 						handler.getEntityManager().setControlled(u);
 						box.setOldCursor(combatCursor);
 					} else {
@@ -989,12 +989,12 @@ public class GameUserInterface extends UserInterface {
 		boxes.add(uiMagetowerCommandBox);
 		boxes.add(uiWallCommandBox);
 		
-		for (UIRectangleContainer box : boxes) {
+		for(UIRectangleContainer box : boxes) {
 			ClickListener clicker = new ClickListener() {
 				@Override
 				public void onClick(int button) {
 					Unit u = handler.getEntityManager().getCommanded();
-					if (!u.isControlled()) {
+					if(!u.isControlled()) {
 						handler.getEntityManager().setControlled(u);
 						box.setOldCursor(combatCursor);
 					} else {
@@ -1031,10 +1031,10 @@ public class GameUserInterface extends UserInterface {
 		hudUIManager.addObject(new UITextRectangle(handler, handler.getWidth() - 50, 16, 42, 24, Color.GRAY, Color.GRAY) {
 			@Override
 			public void doTick() {
-				if (this.getTexts().isEmpty()) {
+				if(this.getTexts().isEmpty()) {
 					this.addText(new Text(Integer.toString(handler.getFPS()), this.getWidth() / 2, this.getHeight() / 2, Color.BLACK, 16));
 				}
-				for (Text t : this.getTexts()) {
+				for(Text t : this.getTexts()) {
 					t.setString(Integer.toString(handler.getFPS()));
 				}
 			}
@@ -1045,10 +1045,10 @@ public class GameUserInterface extends UserInterface {
 		hudUIManager.addObject(new UITextRectangle(handler, handler.getWidth() - 50, 42, 42, 24, Color.YELLOW, Color.YELLOW) {
 			@Override
 			public void doTick() {
-				if (this.getTexts().isEmpty()) {
+				if(this.getTexts().isEmpty()) {
 					this.addText(new Text(Integer.toString(handler.getWorld().getGold()), this.getWidth() / 2, this.getHeight() / 2, Color.BLACK, 16));
 				}
-				for (Text t : this.getTexts()) {
+				for(Text t : this.getTexts()) {
 					t.setString(Integer.toString(handler.getWorld().getGold()));
 				}
 			}
@@ -1060,13 +1060,13 @@ public class GameUserInterface extends UserInterface {
 			@Override
 			public void doTick() {
 				Unit c = handler.getEntityManager().getCommanded();
-				if (c == null) {
+				if(c == null) {
 					return;
 				}
-				if (this.getTexts().isEmpty()) {
+				if(this.getTexts().isEmpty()) {
 					this.addText(new Text(Integer.toString((int) c.getHealth()), this.getWidth() / 2, this.getHeight() / 2, Color.BLACK, 42));
 				}
-				for (Text t : this.getTexts()) {
+				for(Text t : this.getTexts()) {
 					t.setString(Integer.toString((int) c.getHealth()));
 				}
 				this.setHeight((int) ((c.getHealth() * 150) / c.getMaxHealth()));
@@ -1080,14 +1080,14 @@ public class GameUserInterface extends UserInterface {
 			@Override
 			public void doTick() {
 				Unit u = handler.getEntityManager().getCommanded();
-				if (u == null) {
+				if(u == null) {
 					return;
 				}
-				if (this.getTexts().isEmpty()) {
+				if(this.getTexts().isEmpty()) {
 					this.addText(new Text("EXP", this.getWidth() / 2, this.getHeight() / 2 + 2, Color.BLACK, 10));
 				}
-				if (u.hasExp()) {
-					for (Text t : this.getTexts()) {
+				if(u.hasExp()) {
+					for(Text t : this.getTexts()) {
 						t.setString(Integer.toString(u.getExp()));
 					}
 					this.setWidth((u.getExp() * 150) / u.getExpToLvl());

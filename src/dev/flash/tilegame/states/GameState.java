@@ -26,11 +26,11 @@ public class GameState extends State {
 		world.tick(delta);
 		userInterface.tick();
 		
-		if (handler.getKeyManager().m) {
+		if(handler.getKeyManager().m) {
 			handler.getRuleManager().getRule("paused").setBoolVar(true);
 			userInterface.setUIManager(((GameUserInterface) userInterface).getPauseUIManager());//TODO
 		}
-		if (handler.getKeyManager().r) {
+		if(handler.getKeyManager().r) {
 			handler.getRuleManager().getRule("world").setIntVar(handler.getRuleManager().getRule("world").getIntVar() + 1);
 			int inc = handler.getRuleManager().getRule("world").getIntVar() % 4;
 			world = new World(handler, "res/worlds/world" + inc + ".txt");

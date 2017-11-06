@@ -69,10 +69,10 @@ public class SpriteViewerUserInterface extends UserInterface {
 		spriteSelectorUIManager.addObject(new UITextRectangle(handler, 64, handler.getHeight() / 2 - 256, handler.getWidth() - 128, 64, Color.GREEN, Color.GREEN) {
 			@Override
 			public void doTick() {
-				if (this.getTexts().isEmpty()) {
+				if(this.getTexts().isEmpty()) {
 					this.addText(new Text("", this.getWidth() / 2, this.getHeight() / 2, Color.BLACK, 32));
 				}
-				for (Text t : this.getTexts()) {
+				for(Text t : this.getTexts()) {
 					t.setString(handler.getSpriteViewerWorld().getSprite().getName());
 				}
 			}

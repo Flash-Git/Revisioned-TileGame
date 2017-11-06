@@ -21,7 +21,7 @@ public class Timer {//TODO fix all waves, make a note of where every timer is
 	
 	
 	public void tick(double delta) {
-		if (active) {
+		if(active) {
 			elapsedTime = delta + elapsedTime;
 		}
 	}
@@ -32,10 +32,10 @@ public class Timer {//TODO fix all waves, make a note of where every timer is
 	
 	
 	public boolean isDone() {
-		if (active == false) {
+		if(active == false) {
 			return false;
 		}
-		if (elapsedTime > delay) {
+		if(elapsedTime > delay) {
 			elapsedTime = 0;
 			return true;
 		} else {
@@ -53,11 +53,11 @@ public class Timer {//TODO fix all waves, make a note of where every timer is
 	
 	public void setDelay(double delay) {
 		this.delay = delay;
-		if (delay == 0) {
+		if(delay == 0) {
 			deactivate();
 			return;
 		}
-		if (delay != 0) {
+		if(delay != 0) {
 			activate();
 			return;
 		}

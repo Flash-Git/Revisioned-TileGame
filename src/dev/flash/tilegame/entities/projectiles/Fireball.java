@@ -65,22 +65,22 @@ public class Fireball extends Projectile {
 	
 	@Override
 	protected BufferedImage getCurrentAnimationFrame() {
-		if (alive) {
-			if (vX > 0) {
-				if (vX > Math.abs(vY)) {
+		if(alive) {
+			if(vX > 0) {
+				if(vX > Math.abs(vY)) {
 					return animRight.getCurrentFrame();
 				} else {
-					if (vY < 0) {
+					if(vY < 0) {
 						return animUp.getCurrentFrame();
 					} else {
 						return animDown.getCurrentFrame();
 					}
 				}
 			} else {
-				if (Math.abs(vX) > Math.abs(vY)) {
+				if(Math.abs(vX) > Math.abs(vY)) {
 					return animLeft.getCurrentFrame();
 				} else {
-					if (vY < 0) {
+					if(vY < 0) {
 						return animUp.getCurrentFrame();
 					} else {
 						return animDown.getCurrentFrame();

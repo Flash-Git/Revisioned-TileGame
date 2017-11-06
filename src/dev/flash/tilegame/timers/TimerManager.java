@@ -15,44 +15,44 @@ public class TimerManager {
 	}
 	
 	public void tick(double delta) {
-		for (Timer t : timers) {
+		for(Timer t : timers) {
 			t.tick(delta);
 		}
-		if (!toAdd.isEmpty()) {
+		if(!toAdd.isEmpty()) {
 			toAddTimers();
 			toAdd.clear();
 		}
 		
-		if (!toRemove.isEmpty()) {
+		if(!toRemove.isEmpty()) {
 			toRemoveTimers();
 			toRemove.clear();
 		}
 	}
 	
 	public void globalTick(double delta) {
-		for (Timer t : timers) {
-			if (t.isGlobal()) {
+		for(Timer t : timers) {
+			if(t.isGlobal()) {
 				t.tick(delta);
 			}
 		}
-		if (!toAdd.isEmpty()) {
+		if(!toAdd.isEmpty()) {
 			toAddTimers();
 			toAdd.clear();
 		}
 		
-		if (!toRemove.isEmpty()) {
+		if(!toRemove.isEmpty()) {
 			toRemoveTimers();
 			toRemove.clear();
 		}
 	}
 	
 	private void toAddTimers() {
-		for (Timer t : toAdd)
+		for(Timer t : toAdd)
 			addTimer(t);
 	}
 	
 	private void toRemoveTimers() {
-		for (Timer t : toAdd)
+		for(Timer t : toAdd)
 			removeTimer(t);
 	}
 	
@@ -61,7 +61,7 @@ public class TimerManager {
 	}
 	
 	public void addToAddList(ArrayList<Timer> timers) {
-		for (Timer t : timers) {
+		for(Timer t : timers) {
 			toAdd.add(t);
 		}
 		
@@ -72,7 +72,7 @@ public class TimerManager {
 	}
 	
 	public void addToRemoveList(ArrayList<Timer> timers) {
-		for (Timer t : timers) {
+		for(Timer t : timers) {
 			toRemove.add(t);
 		}
 	}

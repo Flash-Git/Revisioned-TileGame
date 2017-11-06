@@ -206,7 +206,7 @@ public abstract class Unit extends Entity {
 	@Override
 	public void tick(double delta) {
 		super.tick(delta);
-		if (alive) {
+		if(alive) {
 			updateState();
 			state.tick(delta);
 		}
@@ -222,18 +222,18 @@ public abstract class Unit extends Entity {
 	protected abstract void animate();
 	
 	private void updateState() {
-		if (isControlled()) {
-			if (objective) {
+		if(isControlled()) {
+			if(objective) {
 				state = objectiveState;
 				return;
 			}
 			state = controlledState;
 			return;
 		}
-		if (!noTarget) {
+		if(!noTarget) {
 			state = combatState;
 			return;
-		} else if (objective) {
+		} else if(objective) {
 			state = objectiveState;
 			return;
 		} else {
@@ -247,7 +247,7 @@ public abstract class Unit extends Entity {
 	
 	public void genPath(int tX, int tY) {
 		//Check Line of sight
-		if (!intersectsWithSolids(getlOS(tX, tY))) {
+		if(!intersectsWithSolids(getlOS(tX, tY))) {
 			ModifiedBresenham.generatePath(handler, path, getCenterX() / 32, getCenterY() / 32, tX / 32, tY / 32);
 			//System.out.println("Bres Pathfinding");
 		} else {
@@ -257,19 +257,19 @@ public abstract class Unit extends Entity {
 	}
 	
 	public void pathTo(double delta, int x, int y, int defcon) {
-		if (!isMobile()) {
+		if(!isMobile()) {
 			System.err.println("immobile unit trying to move");
 			return;
 		}
 		
-		if (this.defcon > defcon) {
+		if(this.defcon > defcon) {
 			//if bigger threat, override previous actions
 			this.defcon = defcon;
 			genPath(x, y);
 			return;
 		}
 		
-		if (path.isEmpty()) {
+		if(path.isEmpty()) {
 			this.defcon = defcon;
 			genPath(x, y);
 		} else {
@@ -278,7 +278,7 @@ public abstract class Unit extends Entity {
 	}
 	
 	protected void followPath(double delta) {
-		if (path.isEmpty()) {
+		if(path.isEmpty()) {
 			return;
 		}
 		
@@ -308,18 +308,18 @@ public abstract class Unit extends Entity {
 //			path.clear();
 //			return;
 //		}
-		if (distance < 6) {//precision in pixels 12
+		if(distance < 6) {//precision in pixels 12
 			path.remove(0);
 			patienceTimer.reset();
 		}
 	}
 	
 	public void move(double delta, double mX, double mY) {
-		if (!TileChecker.isSolid((int) mX + bounds.x, (int) y + bounds.y) && !TileChecker.isSolid((int) mX + bounds.x + bounds.width, (int) y + bounds.y)) {
+		if(!TileChecker.isSolid((int) mX + bounds.x, (int) y + bounds.y) && !TileChecker.isSolid((int) mX + bounds.x + bounds.width, (int) y + bounds.y)) {
 			x = (float) mX;
 		}
 		
-		if (!TileChecker.isSolid((int) x + bounds.x, (int) mY + bounds.y) && !TileChecker.isSolid((int) x + bounds.x, (int) mY + bounds.height + bounds.y)) {
+		if(!TileChecker.isSolid((int) x + bounds.x, (int) mY + bounds.y) && !TileChecker.isSolid((int) x + bounds.x, (int) mY + bounds.height + bounds.y)) {
 			y = (float) mY;
 		}
 	}
@@ -338,7 +338,7 @@ public abstract class Unit extends Entity {
 	}
 	
 	public void doCommandAction() {
-		if (commandNum == 0) {
+		if(commandNum == 0) {
 			objective = false;
 			defcon = 5;
 			path.clear();
@@ -351,7 +351,7 @@ public abstract class Unit extends Entity {
 		
 		int gold = handler.getWorld().getGold();
 		
-		if (gold >= creature.getCost()) {//TODO remove this
+		if(gold >= creature.getCost()) {//TODO remove this
 			handler.getEntityManager().addToAddList(creature);
 			handler.getWorld().setGold(gold - creature.getCost());
 		} else {
@@ -363,11 +363,11 @@ public abstract class Unit extends Entity {
 	
 	@Override
 	public void select() {
-		if (!selected) {
+		if(!selected) {
 			selected = true;
 			handler.getEntityManager().setSelected(this);
 		} else {
-			if (team == 1) {
+			if(team == 1) {
 				commanded = true;
 				handler.getEntityManager().setCommanded(this);
 				handler.getGameUserInterface().getHudUIManager().setUICommandBox(uiCommandBox);//TODO no instanceof in gameuserinterface but left with this..
@@ -377,15 +377,15 @@ public abstract class Unit extends Entity {
 	
 	//COMBAT
 	protected void attack(double delta) {
-		if (!attackTimer.isDone()) {
+		if(!attackTimer.isDone()) {
 			idle(delta);
 			return;
 		}
-		if (melee) {
+		if(melee) {
 			meleeAttack();
 			return;
 		}
-		if (ranged) {
+		if(ranged) {
 			attackTarget();
 			return;
 		}
@@ -395,45 +395,45 @@ public abstract class Unit extends Entity {
 	
 	public void meleeAttack() {
 		Rectangle attackRectangle = new Rectangle((int) (x + bounds.getX()), (int) (y + bounds.getY()), (int) bounds.getWidth(), (int) bounds.getHeight());
-		if (vX > 0) {
+		if(vX > 0) {
 			attackRectangle.x = (int) (x + bounds.x);
 			attackRectangle.y = (int) (y + bounds.y) - bounds.height;
 			attackRectangle.width = bounds.width * 2;
 			attackRectangle.height = bounds.height * 3;
 		}
-		if (vY > 0) {
+		if(vY > 0) {
 			attackRectangle.x = (int) (x + bounds.x) - bounds.width;
 			attackRectangle.y = (int) (y + bounds.y);
 			attackRectangle.width = bounds.width * 3;
 			attackRectangle.height = bounds.height * 2;
 		}
-		if (vX < 0) {
+		if(vX < 0) {
 			attackRectangle.x = (int) (x + bounds.x) - bounds.width;
 			attackRectangle.y = (int) (y + bounds.y) - bounds.height;
 			attackRectangle.width = bounds.width * 2;
 			attackRectangle.height = bounds.height * 3;
 		}
-		if (vY < 0) {
+		if(vY < 0) {
 			attackRectangle.x = (int) (x + bounds.x) - bounds.width;
 			attackRectangle.y = (int) (y + bounds.y) - bounds.height;
 			attackRectangle.width = bounds.width * 3;
 			attackRectangle.height = bounds.height * 2;
 		}
-		for (Entity e : handler.getChunkManager().getEntitiesFromNeighbours(chunk)) {
-			if (!(e instanceof Unit)) {
+		for(Entity e : handler.getChunkManager().getEntitiesFromNeighbours(chunk)) {
+			if(!(e instanceof Unit)) {
 				continue;
 			}
 			Unit t = (Unit) e;
-			if (t.getTeam() == team) {
+			if(t.getTeam() == team) {
 				continue;
 			}
-			if (!t.isAlive()) {
+			if(!t.isAlive()) {
 				continue;
 			}
 			
-			if (attackRectangle.intersects(t.getCollisionBounds(0, 0)) || t.getCollisionBounds(0, 0).intersects(attackRectangle)) {
+			if(attackRectangle.intersects(t.getCollisionBounds(0, 0)) || t.getCollisionBounds(0, 0).intersects(attackRectangle)) {
 				t.modHealth(t.getHealth() - this.damage);
-				if (!t.isAlive()) {
+				if(!t.isAlive()) {
 					onKill(t.getExpReward());
 				}
 			}
@@ -449,7 +449,7 @@ public abstract class Unit extends Entity {
 	}
 	
 	public void attackCoords(int tX, int tY) {
-		if (!attackTimer.isDone()) {
+		if(!attackTimer.isDone()) {
 			return;
 		}
 		float distanceToTarget = (float) (Math.sqrt(Math.pow(tX - getCenterX(), 2) + Math.pow(tY - getCenterY(), 2)) / Tile.TILEWIDTH);
@@ -485,15 +485,15 @@ public abstract class Unit extends Entity {
 		int facingY = tileY2 - tileY1;
 		
 		//on same tile
-		if (facingX == 0 && facingY == 0) {
+		if(facingX == 0 && facingY == 0) {
 			return true;//TODO idk
 		}
 		
-		if (Math.abs(facingX) > 0) {
+		if(Math.abs(facingX) > 0) {
 			facingX = facingX / Math.abs(facingX);
 		}
 		
-		if (Math.abs(facingY) > 0) {
+		if(Math.abs(facingY) > 0) {
 			facingY = facingY / Math.abs(facingY);
 		}
 		
@@ -501,48 +501,48 @@ public abstract class Unit extends Entity {
 		int checkerX = tileX1;
 		int checkerY = tileY1;
 		
-		while (collision == false) {
+		while(collision == false) {
 			//if true, line of sight is broken
-			if (TileChecker.outOfMap(checkerX * 32, checkerY * 32)) {
+			if(TileChecker.outOfMap(checkerX * 32, checkerY * 32)) {
 				System.err.println("out of the map in unit");
 				collision = true;
 				return true;
 			}
-			if (TileChecker.isSolid(checkerX * 32, checkerY * 32)) {
+			if(TileChecker.isSolid(checkerX * 32, checkerY * 32)) {
 				collision = true;
 				return true;
 			}
 			
-			if (targetIsUnit) {
+			if(targetIsUnit) {
 				
 				Unit[] skipped = new Unit[2];
 				skipped[0] = this;
 				skipped[1] = targetUnit;
-				if (TileChecker.buildingsOnTile(checkerX * 32, checkerY * 32, skipped)) {
+				if(TileChecker.buildingsOnTile(checkerX * 32, checkerY * 32, skipped)) {
 					collision = true;
 					return true;
 				}
 			} else {
-				if (TileChecker.buildingsOnTile(checkerX * 32, checkerY * 32, this)) {
+				if(TileChecker.buildingsOnTile(checkerX * 32, checkerY * 32, this)) {
 					collision = true;
 					return true;
 				}
 			}
 			
 			//if next step on X doesn't intersect with line, then it must on y
-			if (facingX == 0) {
+			if(facingX == 0) {
 				checkerY += facingY;
-			} else if (facingY == 0) {
+			} else if(facingY == 0) {
 				checkerX += facingX;
 			} else {
-				if (lOS.intersects((checkerX + facingX) * 32, checkerY * 32, 32, 32)) {
+				if(lOS.intersects((checkerX + facingX) * 32, checkerY * 32, 32, 32)) {
 					checkerX += facingX;
 				} else {
 					checkerY += facingY;
 				}
 			}
 			//if it reaches the end tile, line of sight is unbroken
-			if (checkerX == tileX2 && checkerY == tileY2) {
+			if(checkerX == tileX2 && checkerY == tileY2) {
 				return false;
 			}
 		}
@@ -590,10 +590,10 @@ public abstract class Unit extends Entity {
 	}
 	
 	public int getTargetX() {
-		if (noTarget) {
+		if(noTarget) {
 			System.out.println(this + " has no target");
 			return -1;
-		} else if (targetIsUnit) {
+		} else if(targetIsUnit) {
 			return targetUnit.getCenterX();
 		} else {
 			return targetX;
@@ -607,10 +607,10 @@ public abstract class Unit extends Entity {
 	}
 	
 	public int getTargetY() {
-		if (noTarget) {
+		if(noTarget) {
 			System.out.println(this + " has no target");
 			return -1;
-		} else if (targetIsUnit) {
+		} else if(targetIsUnit) {
 			return targetUnit.getCenterY();
 		} else {
 			return targetY;
@@ -706,7 +706,7 @@ public abstract class Unit extends Entity {
 	
 	public void setAttackSpeed(float attackSpeed) {
 		attackTimer.setDelay(1 / attackSpeed * 1000);
-		if (attackTimer.getDelay() != 0) {
+		if(attackTimer.getDelay() != 0) {
 			attackTimer.activate();
 		} else {
 			attackTimer.deactivate();
@@ -714,7 +714,7 @@ public abstract class Unit extends Entity {
 	}
 	
 	public Line2D.Double getlOS() {
-		if (noTarget) {
+		if(noTarget) {
 			return new Line2D.Double(getCenterX(), getCenterY(), getObjectiveX(), getObjectiveY());
 		}
 		return new Line2D.Double(getCenterX(), getCenterY(), getTargetX(), getTargetY());

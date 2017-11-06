@@ -21,14 +21,14 @@ public class MouseManager implements MouseListener, MouseMotionListener {
 	@Override
 	public void mousePressed(MouseEvent e) {
 		mouseMoved(e);
-		if (e.getButton() == MouseEvent.BUTTON1) {
+		if(e.getButton() == MouseEvent.BUTTON1) {
 			leftPressed = true;
 			
-		} else if (e.getButton() == MouseEvent.BUTTON3) {
+		} else if(e.getButton() == MouseEvent.BUTTON3) {
 			rightPressed = true;
 			
 		}
-		if (uiManager != null && !uiManager.getObjects().isEmpty()) {
+		if(uiManager != null && !uiManager.getObjects().isEmpty()) {
 			uiManager.onMousePressed(e, e.getButton());
 		}
 		
@@ -37,12 +37,12 @@ public class MouseManager implements MouseListener, MouseMotionListener {
 	@Override
 	public void mouseReleased(MouseEvent e) {
 		mouseMoved(e);
-		if (e.getButton() == MouseEvent.BUTTON1) {
+		if(e.getButton() == MouseEvent.BUTTON1) {
 			leftPressed = false;
-		} else if (e.getButton() == MouseEvent.BUTTON3) {
+		} else if(e.getButton() == MouseEvent.BUTTON3) {
 			rightPressed = false;
 		}
-		if (uiManager != null && !uiManager.getObjects().isEmpty()) {
+		if(uiManager != null && !uiManager.getObjects().isEmpty()) {
 			uiManager.onMouseRelease(e, e.getButton());
 		}
 		mouseMoved(e);//refresh mouse location on uiManager switch
@@ -52,7 +52,7 @@ public class MouseManager implements MouseListener, MouseMotionListener {
 	public void mouseMoved(MouseEvent e) {
 		mouseX = e.getX();
 		mouseY = e.getY();
-		if (uiManager != null && !uiManager.getObjects().isEmpty()) {
+		if(uiManager != null && !uiManager.getObjects().isEmpty()) {
 			uiManager.onMouseMove(e);
 		}
 	}

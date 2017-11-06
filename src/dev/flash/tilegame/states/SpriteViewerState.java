@@ -23,11 +23,11 @@ public class SpriteViewerState extends State {
 	public void tick(double delta) {
 		userInterface.tick();
 		
-		if (handler.getKeyManager().m) {
+		if(handler.getKeyManager().m) {
 			handler.getRuleManager().getRule("paused").setBoolVar(true);
 			userInterface.setUIManager(((SpriteViewerUserInterface) userInterface).getSpriteMenuUIManager());//TODO
 		}
-		if (((SpriteViewerUserInterface) userInterface).getSpriteMenuUIManager().equals(userInterface.getUIManager())) {//TODO TEMP
+		if(((SpriteViewerUserInterface) userInterface).getSpriteMenuUIManager().equals(userInterface.getUIManager())) {//TODO TEMP
 			return;
 		}
 		world.tick(delta);
@@ -36,7 +36,7 @@ public class SpriteViewerState extends State {
 	@Override
 	public void render(Graphics g) {
 		userInterface.render(g);
-		if (((SpriteViewerUserInterface) userInterface).getSpriteMenuUIManager().equals(userInterface.getUIManager())) {//TODO TEMP
+		if(((SpriteViewerUserInterface) userInterface).getSpriteMenuUIManager().equals(userInterface.getUIManager())) {//TODO TEMP
 			return;
 		}
 		world.render(g);

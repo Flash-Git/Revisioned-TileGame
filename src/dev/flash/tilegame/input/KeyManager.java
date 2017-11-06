@@ -21,7 +21,7 @@ public class KeyManager implements KeyListener {
 	
 	public void updateKeys() {
 		try {
-			if (handler.getRuleManager().getRule("frKeyboard").getBoolVar() == true) {
+			if(handler.getRuleManager().getRule("frKeyboard").getBoolVar() == true) {
 				//AZERTY KEYBOARD
 				up = (keys[KeyEvent.VK_Z] || keys[KeyEvent.VK_UP]);
 				down = (keys[KeyEvent.VK_S] || keys[KeyEvent.VK_DOWN]);
@@ -34,7 +34,7 @@ public class KeyManager implements KeyListener {
 				left = (keys[KeyEvent.VK_A] || keys[KeyEvent.VK_LEFT]);
 				right = (keys[KeyEvent.VK_D] || keys[KeyEvent.VK_RIGHT]);
 			}
-		} catch (NullPointerException e) {
+		} catch(NullPointerException e) {
 			System.out.println("CAUGHT IT " + e.getStackTrace());
 		}
 		
@@ -57,7 +57,7 @@ public class KeyManager implements KeyListener {
 		
 		//updateKeys();
 		
-		if (inputManager != null)
+		if(inputManager != null)
 			inputManager.keyPressed();
 	}
 	
@@ -65,7 +65,7 @@ public class KeyManager implements KeyListener {
 	public void keyReleased(KeyEvent e) {
 		keys[e.getKeyCode()] = false;
 		updateKeys();
-		if (inputManager != null)
+		if(inputManager != null)
 			inputManager.keyReleased();
 	}
 	
