@@ -3,13 +3,7 @@ package dev.flash.tilegame;
 import dev.flash.tilegame.display.Display;
 import dev.flash.tilegame.gfx.Assets;
 import dev.flash.tilegame.gfx.GameCamera;
-import dev.flash.tilegame.input.KeyManager;
-import dev.flash.tilegame.input.MouseManager;
-import dev.flash.tilegame.rules.Rule;
-import dev.flash.tilegame.rules.RuleManager;
 import dev.flash.tilegame.states.GameState;
-import dev.flash.tilegame.states.MenuState;
-import dev.flash.tilegame.states.SpriteViewerState;
 import dev.flash.tilegame.states.State;
 import dev.flash.tilegame.timers.TimerManager;
 
@@ -36,10 +30,7 @@ public class Game implements Runnable {
 	private boolean running;
 	private Thread thread;
 	
-	//Input
-	private KeyManager keyManager;
-	private MouseManager mouseManager;
-	private RuleManager ruleManager;
+	
 	private TimerManager timerManager;
 	
 	//Camera
@@ -47,8 +38,6 @@ public class Game implements Runnable {
 	
 	//States
 	private State gameState;
-	private State menuState;
-	private State spriteViewerState;
 	
 	//Handler
 	private Handler handler;
@@ -57,52 +46,26 @@ public class Game implements Runnable {
 		this.title = title;
 		this.width = width;
 		this.height = height;
-		keyManager = new KeyManager();
-		mouseManager = new MouseManager();
-		ruleManager = new RuleManager();//putting this in game over world, so restarts don't touch the rules
 		timerManager = new TimerManager();
+		
 	}
 	
 	private void init() {
 		handler = new Handler(this);
-		keyManager.setHandler(handler);
-		//Initial rules TODO import from file
-		ruleManager.addRule(new Rule(handler, "world", 1));//is paused
-		Rule pausedRule = new Rule(handler, "paused", false);
-		pausedRule.getRuleTimer().setGlobal(true);
-		ruleManager.addRule(pausedRule);//is paused
-		
-		Rule frKeyboardRule = new Rule(handler, "frKeyboard", false);
-		//frKeyboardRule.getRuleTimer().setGlobal(true);
-		ruleManager.addRule(frKeyboardRule);
-		
-		ruleManager.addRule(new Rule(handler, "bounds", false));//show bounds
-		ruleManager.addRule(new Rule(handler, "checkNum", 999));//how many cells entities will check to reach goal before giving up
-		ruleManager.addRule(new Rule(handler, "entity collision", true));//allows entities to collide//TODO actually make use of this
-		ruleManager.addRule(new Rule(handler, "score", 0));//initial score
 		
 		//Create window
 		display = new Display(title, width, height);
-		display.getFrame().addKeyListener(keyManager);
-		display.getFrame().addMouseListener(mouseManager);
-		display.getFrame().addMouseMotionListener(mouseManager);
-		display.getCanvas().addMouseListener(mouseManager);
-		display.getCanvas().addMouseMotionListener(mouseManager);
 		
 		//Load the game's assets
 		Assets.init();
 		
 		gameCamera = new GameCamera(handler, 0, 0);
 		
-		//Setting up the program's States
-		menuState = new MenuState(handler);
 		gameState = new GameState(handler);
-		spriteViewerState = new SpriteViewerState(handler);
-		State.setState(menuState);
+		State.setState(gameState);
 	}
 	
 	private void tick(double delta) {
-		keyManager.updateKeys();//TODO this is more of a failsafe than actually necessary
 		if(State.getState() != null) {
 			State.getState().tick(delta);
 		}
@@ -206,40 +169,16 @@ public class Game implements Runnable {
 		this.gameState = gameState;
 	}
 	
-	public State getMenuState() {
-		return menuState;
-	}
 	
-	public void setMenuState(State menuState) {
-		this.menuState = menuState;
-	}
-	
-	public State getSpriteViewerState() {
-		return spriteViewerState;
-	}
-	
-	public void setSpriteViewerState(State spriteViewerState) {
-		this.spriteViewerState = spriteViewerState;
-	}
 	
 	public int getFPS() {
 		return fps;
 	}
 	
-	public KeyManager getKeyManager() {
-		return keyManager;
-	}
 	
-	public MouseManager getMouseManager() {
-		return mouseManager;
-	}
 	
 	public GameCamera getGameCamera() {
 		return gameCamera;
-	}
-	
-	public RuleManager getRuleManager() {
-		return ruleManager;
 	}
 	
 	public TimerManager getTimerManager() {

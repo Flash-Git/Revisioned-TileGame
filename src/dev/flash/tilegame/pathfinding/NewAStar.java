@@ -46,7 +46,7 @@ public class NewAStar {
 			n.setWeight(0);
 		}
 		
-		int checkNum = handler.getRuleManager().getRule("checkNum").getIntVar();
+		int checkNum = 100;
 		ArrayList<Node> open = new ArrayList<Node>();//open list of Nodes (to check)
 		ArrayList<Node> closed = new ArrayList<Node>();//closed list of Nodes (checked)
 		

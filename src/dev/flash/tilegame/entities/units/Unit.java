@@ -333,8 +333,8 @@ public abstract class Unit extends Entity {
 	public void doCommand(int commandNum) {
 		this.commandNum = commandNum;
 		objective = true;
-		objectiveX = (int) ((handler.getMouseManager().getMouseX() + handler.getGameCamera().getxOffset()) / 32) * 32 + 16;
-		objectiveY = (int) ((handler.getMouseManager().getMouseY() + handler.getGameCamera().getyOffset()) / 32) * 32 + 16;
+		//objectiveX = (int) ((handler.getMouseManager().getMouseX() + handler.getGameCamera().getxOffset()) / 32) * 32 + 16;
+		//objectiveY = (int) ((handler.getMouseManager().getMouseY() + handler.getGameCamera().getyOffset()) / 32) * 32 + 16;
 	}
 	
 	public void doCommandAction() {
@@ -349,11 +349,9 @@ public abstract class Unit extends Entity {
 		creature.setX(creature.getX() - creature.getWidth() / 2);
 		creature.setY(creature.getY() - creature.getHeight() / 2);
 		
-		int gold = handler.getWorld().getGold();
 		
-		if(gold >= creature.getCost()) {//TODO remove this
+		if(100 >= creature.getCost()) {//TODO remove this
 			handler.getEntityManager().addToAddList(creature);
-			handler.getWorld().setGold(gold - creature.getCost());
 		} else {
 			System.out.println("Not enough gold for " + creature.getType() + ".");
 		}
@@ -370,7 +368,6 @@ public abstract class Unit extends Entity {
 			if(team == 1) {
 				commanded = true;
 				handler.getEntityManager().setCommanded(this);
-				handler.getGameUserInterface().getHudUIManager().setUICommandBox(uiCommandBox);//TODO no instanceof in gameuserinterface but left with this..
 			}
 		}
 	}

@@ -17,7 +17,6 @@ public class Builder extends Creature {
 	public Builder(Handler handler, float x, float y, int team) {
 		super(handler, x, y, Creature.DEFAULT_WIDTH, Creature.DEFAULT_HEIGHT, team);
 		
-		uiCommandBox = handler.getGameUserInterface().getUiBuilderCommandBox();
 	}
 	
 	@Override
@@ -111,11 +110,10 @@ public class Builder extends Creature {
 			return;
 		}
 		
-		int gold = handler.getWorld().getGold();
+		int gold = 5500;
 		
 		if(gold > building.getCost()) {
 			handler.getEntityManager().addToAddList(building);
-			handler.getWorld().setGold(handler.getWorld().getGold() - building.getCost());
 		} else {
 			System.out.println("Not enough gold for " + building.getType() + ".");
 		}

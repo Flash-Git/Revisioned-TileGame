@@ -2,9 +2,150 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="500dc6b6-60dd-4179-928f-860704711b08" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Revisioned-TileGame/dev/flash/tilegame/Launcher.class" afterPath="$PROJECT_DIR$/out/production/Revisioned-TileGame/dev/flash/tilegame/Launcher.class" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Revisioned-TileGame/dev/flash/tilegame/input/InputManager.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Revisioned-TileGame/dev/flash/tilegame/input/KeyManager.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Revisioned-TileGame/dev/flash/tilegame/states/MenuState.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Revisioned-TileGame/dev/flash/tilegame/states/SpriteViewerState.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Revisioned-TileGame/dev/flash/tilegame/states/WorldEditorState.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Revisioned-TileGame/dev/flash/tilegame/ui/GameUserInterface$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Revisioned-TileGame/dev/flash/tilegame/ui/GameUserInterface$10.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Revisioned-TileGame/dev/flash/tilegame/ui/GameUserInterface$11.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Revisioned-TileGame/dev/flash/tilegame/ui/GameUserInterface$12.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Revisioned-TileGame/dev/flash/tilegame/ui/GameUserInterface$13.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Revisioned-TileGame/dev/flash/tilegame/ui/GameUserInterface$14.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Revisioned-TileGame/dev/flash/tilegame/ui/GameUserInterface$15.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Revisioned-TileGame/dev/flash/tilegame/ui/GameUserInterface$16.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Revisioned-TileGame/dev/flash/tilegame/ui/GameUserInterface$17.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Revisioned-TileGame/dev/flash/tilegame/ui/GameUserInterface$18.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Revisioned-TileGame/dev/flash/tilegame/ui/GameUserInterface$19.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Revisioned-TileGame/dev/flash/tilegame/ui/GameUserInterface$2.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Revisioned-TileGame/dev/flash/tilegame/ui/GameUserInterface$20.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Revisioned-TileGame/dev/flash/tilegame/ui/GameUserInterface$21.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Revisioned-TileGame/dev/flash/tilegame/ui/GameUserInterface$22.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Revisioned-TileGame/dev/flash/tilegame/ui/GameUserInterface$23.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Revisioned-TileGame/dev/flash/tilegame/ui/GameUserInterface$24.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Revisioned-TileGame/dev/flash/tilegame/ui/GameUserInterface$25.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Revisioned-TileGame/dev/flash/tilegame/ui/GameUserInterface$26.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Revisioned-TileGame/dev/flash/tilegame/ui/GameUserInterface$27.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Revisioned-TileGame/dev/flash/tilegame/ui/GameUserInterface$28.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Revisioned-TileGame/dev/flash/tilegame/ui/GameUserInterface$29.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Revisioned-TileGame/dev/flash/tilegame/ui/GameUserInterface$3.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Revisioned-TileGame/dev/flash/tilegame/ui/GameUserInterface$30.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Revisioned-TileGame/dev/flash/tilegame/ui/GameUserInterface$31.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Revisioned-TileGame/dev/flash/tilegame/ui/GameUserInterface$32.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Revisioned-TileGame/dev/flash/tilegame/ui/GameUserInterface$33.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Revisioned-TileGame/dev/flash/tilegame/ui/GameUserInterface$34.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Revisioned-TileGame/dev/flash/tilegame/ui/GameUserInterface$35.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Revisioned-TileGame/dev/flash/tilegame/ui/GameUserInterface$36.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Revisioned-TileGame/dev/flash/tilegame/ui/GameUserInterface$37.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Revisioned-TileGame/dev/flash/tilegame/ui/GameUserInterface$38.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Revisioned-TileGame/dev/flash/tilegame/ui/GameUserInterface$39.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Revisioned-TileGame/dev/flash/tilegame/ui/GameUserInterface$4.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Revisioned-TileGame/dev/flash/tilegame/ui/GameUserInterface$40.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Revisioned-TileGame/dev/flash/tilegame/ui/GameUserInterface$41.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Revisioned-TileGame/dev/flash/tilegame/ui/GameUserInterface$42.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Revisioned-TileGame/dev/flash/tilegame/ui/GameUserInterface$43.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Revisioned-TileGame/dev/flash/tilegame/ui/GameUserInterface$44.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Revisioned-TileGame/dev/flash/tilegame/ui/GameUserInterface$45.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Revisioned-TileGame/dev/flash/tilegame/ui/GameUserInterface$46.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Revisioned-TileGame/dev/flash/tilegame/ui/GameUserInterface$47.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Revisioned-TileGame/dev/flash/tilegame/ui/GameUserInterface$48.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Revisioned-TileGame/dev/flash/tilegame/ui/GameUserInterface$49.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Revisioned-TileGame/dev/flash/tilegame/ui/GameUserInterface$5.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Revisioned-TileGame/dev/flash/tilegame/ui/GameUserInterface$50.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Revisioned-TileGame/dev/flash/tilegame/ui/GameUserInterface$51.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Revisioned-TileGame/dev/flash/tilegame/ui/GameUserInterface$52.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Revisioned-TileGame/dev/flash/tilegame/ui/GameUserInterface$53.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Revisioned-TileGame/dev/flash/tilegame/ui/GameUserInterface$54.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Revisioned-TileGame/dev/flash/tilegame/ui/GameUserInterface$55.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Revisioned-TileGame/dev/flash/tilegame/ui/GameUserInterface$56.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Revisioned-TileGame/dev/flash/tilegame/ui/GameUserInterface$6.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Revisioned-TileGame/dev/flash/tilegame/ui/GameUserInterface$7.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Revisioned-TileGame/dev/flash/tilegame/ui/GameUserInterface$8.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Revisioned-TileGame/dev/flash/tilegame/ui/GameUserInterface$9.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Revisioned-TileGame/dev/flash/tilegame/ui/GameUserInterface.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Revisioned-TileGame/dev/flash/tilegame/ui/MenuUserInterface$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Revisioned-TileGame/dev/flash/tilegame/ui/MenuUserInterface$2.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Revisioned-TileGame/dev/flash/tilegame/ui/MenuUserInterface$3.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Revisioned-TileGame/dev/flash/tilegame/ui/MenuUserInterface.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Revisioned-TileGame/dev/flash/tilegame/ui/SpriteViewerUserInterface$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Revisioned-TileGame/dev/flash/tilegame/ui/SpriteViewerUserInterface$2.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Revisioned-TileGame/dev/flash/tilegame/ui/SpriteViewerUserInterface$3.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Revisioned-TileGame/dev/flash/tilegame/ui/SpriteViewerUserInterface$4.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Revisioned-TileGame/dev/flash/tilegame/ui/SpriteViewerUserInterface$5.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Revisioned-TileGame/dev/flash/tilegame/ui/SpriteViewerUserInterface$6.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Revisioned-TileGame/dev/flash/tilegame/ui/SpriteViewerUserInterface$7.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Revisioned-TileGame/dev/flash/tilegame/ui/SpriteViewerUserInterface$8.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Revisioned-TileGame/dev/flash/tilegame/ui/SpriteViewerUserInterface.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Revisioned-TileGame/dev/flash/tilegame/ui/UserInterface$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Revisioned-TileGame/dev/flash/tilegame/ui/UserInterface$2.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Revisioned-TileGame/dev/flash/tilegame/ui/UserInterface.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Revisioned-TileGame/dev/flash/tilegame/ui/WorldEditorUserInterface$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Revisioned-TileGame/dev/flash/tilegame/ui/WorldEditorUserInterface$2.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Revisioned-TileGame/dev/flash/tilegame/ui/WorldEditorUserInterface$3.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Revisioned-TileGame/dev/flash/tilegame/ui/WorldEditorUserInterface$4.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Revisioned-TileGame/dev/flash/tilegame/ui/WorldEditorUserInterface.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Revisioned-TileGame/dev/flash/tilegame/worlds/SpriteViewerWorld.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Revisioned-TileGame/dev/flash/tilegame/worlds/WorldEditor.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/dev/flash/tilegame/input/InputManager.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/dev/flash/tilegame/input/KeyManager.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/dev/flash/tilegame/states/MenuState.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/dev/flash/tilegame/states/SpriteViewerState.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/dev/flash/tilegame/states/WorldEditorState.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/dev/flash/tilegame/ui/GameUserInterface.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/dev/flash/tilegame/ui/MenuUserInterface.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/dev/flash/tilegame/ui/SpriteViewerUserInterface.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/dev/flash/tilegame/ui/UserInterface.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/dev/flash/tilegame/ui/WorldEditorUserInterface.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/dev/flash/tilegame/worlds/SpriteViewerWorld.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/dev/flash/tilegame/worlds/WorldEditor.java" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Revisioned-TileGame/dev/flash/tilegame/Game.class" afterPath="$PROJECT_DIR$/out/production/Revisioned-TileGame/dev/flash/tilegame/Game.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Revisioned-TileGame/dev/flash/tilegame/Handler.class" afterPath="$PROJECT_DIR$/out/production/Revisioned-TileGame/dev/flash/tilegame/Handler.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Revisioned-TileGame/dev/flash/tilegame/entities/EntityManager.class" afterPath="$PROJECT_DIR$/out/production/Revisioned-TileGame/dev/flash/tilegame/entities/EntityManager.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Revisioned-TileGame/dev/flash/tilegame/entities/units/Unit.class" afterPath="$PROJECT_DIR$/out/production/Revisioned-TileGame/dev/flash/tilegame/entities/units/Unit.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Revisioned-TileGame/dev/flash/tilegame/entities/units/UnitControlledState.class" afterPath="$PROJECT_DIR$/out/production/Revisioned-TileGame/dev/flash/tilegame/entities/units/UnitControlledState.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Revisioned-TileGame/dev/flash/tilegame/entities/units/buildings/Barracks.class" afterPath="$PROJECT_DIR$/out/production/Revisioned-TileGame/dev/flash/tilegame/entities/units/buildings/Barracks.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Revisioned-TileGame/dev/flash/tilegame/entities/units/buildings/MageTower.class" afterPath="$PROJECT_DIR$/out/production/Revisioned-TileGame/dev/flash/tilegame/entities/units/buildings/MageTower.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Revisioned-TileGame/dev/flash/tilegame/entities/units/buildings/Tower.class" afterPath="$PROJECT_DIR$/out/production/Revisioned-TileGame/dev/flash/tilegame/entities/units/buildings/Tower.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Revisioned-TileGame/dev/flash/tilegame/entities/units/buildings/Wall.class" afterPath="$PROJECT_DIR$/out/production/Revisioned-TileGame/dev/flash/tilegame/entities/units/buildings/Wall.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Revisioned-TileGame/dev/flash/tilegame/entities/units/creatures/Archer.class" afterPath="$PROJECT_DIR$/out/production/Revisioned-TileGame/dev/flash/tilegame/entities/units/creatures/Archer.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Revisioned-TileGame/dev/flash/tilegame/entities/units/creatures/Builder.class" afterPath="$PROJECT_DIR$/out/production/Revisioned-TileGame/dev/flash/tilegame/entities/units/creatures/Builder.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Revisioned-TileGame/dev/flash/tilegame/entities/units/creatures/Creature.class" afterPath="$PROJECT_DIR$/out/production/Revisioned-TileGame/dev/flash/tilegame/entities/units/creatures/Creature.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Revisioned-TileGame/dev/flash/tilegame/entities/units/creatures/Mudcrab.class" afterPath="$PROJECT_DIR$/out/production/Revisioned-TileGame/dev/flash/tilegame/entities/units/creatures/Mudcrab.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Revisioned-TileGame/dev/flash/tilegame/entities/units/creatures/Ogre.class" afterPath="$PROJECT_DIR$/out/production/Revisioned-TileGame/dev/flash/tilegame/entities/units/creatures/Ogre.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Revisioned-TileGame/dev/flash/tilegame/entities/units/creatures/Wizard.class" afterPath="$PROJECT_DIR$/out/production/Revisioned-TileGame/dev/flash/tilegame/entities/units/creatures/Wizard.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Revisioned-TileGame/dev/flash/tilegame/entities/units/creatures/Zombie.class" afterPath="$PROJECT_DIR$/out/production/Revisioned-TileGame/dev/flash/tilegame/entities/units/creatures/Zombie.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Revisioned-TileGame/dev/flash/tilegame/pathfinding/AStar.class" afterPath="$PROJECT_DIR$/out/production/Revisioned-TileGame/dev/flash/tilegame/pathfinding/AStar.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Revisioned-TileGame/dev/flash/tilegame/pathfinding/NewAStar.class" afterPath="$PROJECT_DIR$/out/production/Revisioned-TileGame/dev/flash/tilegame/pathfinding/NewAStar.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Revisioned-TileGame/dev/flash/tilegame/states/GameState.class" afterPath="$PROJECT_DIR$/out/production/Revisioned-TileGame/dev/flash/tilegame/states/GameState.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Revisioned-TileGame/dev/flash/tilegame/states/State.class" afterPath="$PROJECT_DIR$/out/production/Revisioned-TileGame/dev/flash/tilegame/states/State.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Revisioned-TileGame/dev/flash/tilegame/ui/objects/UIObject.class" afterPath="$PROJECT_DIR$/out/production/Revisioned-TileGame/dev/flash/tilegame/ui/objects/UIObject.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Revisioned-TileGame/dev/flash/tilegame/ui/objects/UIRectangleContainer.class" afterPath="$PROJECT_DIR$/out/production/Revisioned-TileGame/dev/flash/tilegame/ui/objects/UIRectangleContainer.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Revisioned-TileGame/dev/flash/tilegame/worlds/World.class" afterPath="$PROJECT_DIR$/out/production/Revisioned-TileGame/dev/flash/tilegame/worlds/World.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/dev/flash/tilegame/Launcher.java" afterPath="$PROJECT_DIR$/src/dev/flash/tilegame/Launcher.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/dev/flash/tilegame/Game.java" afterPath="$PROJECT_DIR$/src/dev/flash/tilegame/Game.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/dev/flash/tilegame/Handler.java" afterPath="$PROJECT_DIR$/src/dev/flash/tilegame/Handler.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/dev/flash/tilegame/entities/EntityManager.java" afterPath="$PROJECT_DIR$/src/dev/flash/tilegame/entities/EntityManager.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/dev/flash/tilegame/entities/units/Unit.java" afterPath="$PROJECT_DIR$/src/dev/flash/tilegame/entities/units/Unit.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/dev/flash/tilegame/entities/units/UnitControlledState.java" afterPath="$PROJECT_DIR$/src/dev/flash/tilegame/entities/units/UnitControlledState.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/dev/flash/tilegame/entities/units/buildings/Barracks.java" afterPath="$PROJECT_DIR$/src/dev/flash/tilegame/entities/units/buildings/Barracks.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/dev/flash/tilegame/entities/units/buildings/MageTower.java" afterPath="$PROJECT_DIR$/src/dev/flash/tilegame/entities/units/buildings/MageTower.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/dev/flash/tilegame/entities/units/buildings/Tower.java" afterPath="$PROJECT_DIR$/src/dev/flash/tilegame/entities/units/buildings/Tower.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/dev/flash/tilegame/entities/units/buildings/Wall.java" afterPath="$PROJECT_DIR$/src/dev/flash/tilegame/entities/units/buildings/Wall.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/dev/flash/tilegame/entities/units/creatures/Archer.java" afterPath="$PROJECT_DIR$/src/dev/flash/tilegame/entities/units/creatures/Archer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/dev/flash/tilegame/entities/units/creatures/Builder.java" afterPath="$PROJECT_DIR$/src/dev/flash/tilegame/entities/units/creatures/Builder.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/dev/flash/tilegame/entities/units/creatures/Creature.java" afterPath="$PROJECT_DIR$/src/dev/flash/tilegame/entities/units/creatures/Creature.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/dev/flash/tilegame/entities/units/creatures/Mudcrab.java" afterPath="$PROJECT_DIR$/src/dev/flash/tilegame/entities/units/creatures/Mudcrab.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/dev/flash/tilegame/entities/units/creatures/Ogre.java" afterPath="$PROJECT_DIR$/src/dev/flash/tilegame/entities/units/creatures/Ogre.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/dev/flash/tilegame/entities/units/creatures/Wizard.java" afterPath="$PROJECT_DIR$/src/dev/flash/tilegame/entities/units/creatures/Wizard.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/dev/flash/tilegame/entities/units/creatures/Zombie.java" afterPath="$PROJECT_DIR$/src/dev/flash/tilegame/entities/units/creatures/Zombie.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/dev/flash/tilegame/pathfinding/AStar.java" afterPath="$PROJECT_DIR$/src/dev/flash/tilegame/pathfinding/AStar.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/dev/flash/tilegame/pathfinding/NewAStar.java" afterPath="$PROJECT_DIR$/src/dev/flash/tilegame/pathfinding/NewAStar.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/dev/flash/tilegame/states/GameState.java" afterPath="$PROJECT_DIR$/src/dev/flash/tilegame/states/GameState.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/dev/flash/tilegame/states/State.java" afterPath="$PROJECT_DIR$/src/dev/flash/tilegame/states/State.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/dev/flash/tilegame/ui/objects/UIObject.java" afterPath="$PROJECT_DIR$/src/dev/flash/tilegame/ui/objects/UIObject.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/dev/flash/tilegame/ui/objects/UIRectangleContainer.java" afterPath="$PROJECT_DIR$/src/dev/flash/tilegame/ui/objects/UIRectangleContainer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/dev/flash/tilegame/worlds/World.java" afterPath="$PROJECT_DIR$/src/dev/flash/tilegame/worlds/World.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -26,7 +167,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ImageLoader.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ImageLoader.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/dev/flash/tilegame/gfx/ImageLoader.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="136">
@@ -59,9 +200,25 @@
       <file leaf-file-name="Handler.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/dev/flash/tilegame/Handler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="16" column="13" lean-forward="false" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-              <folding />
+            <state relative-caret-position="719">
+              <caret line="75" column="0" lean-forward="false" selection-start-line="75" selection-start-column="0" selection-end-line="75" selection-end-column="0" />
+              <folding>
+                <element signature="e#717#718#0" expanded="true" />
+                <element signature="e#753#754#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="State.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/dev/flash/tilegame/states/State.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+              <folding>
+                <element signature="e#406#407#0" expanded="true" />
+                <element signature="e#433#434#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -69,64 +226,234 @@
       <file leaf-file-name="Game.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/dev/flash/tilegame/Game.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1632">
-              <caret line="110" column="17" lean-forward="false" selection-start-line="110" selection-start-column="17" selection-end-line="110" selection-end-column="17" />
+            <state relative-caret-position="314">
+              <caret line="185" column="5" lean-forward="false" selection-start-line="185" selection-start-column="5" selection-end-line="185" selection-end-column="5" />
+              <folding>
+                <element signature="e#3609#3610#0" expanded="true" />
+                <element signature="e#3635#3636#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="World.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/dev/flash/tilegame/worlds/World.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="189">
+              <caret line="103" column="8" lean-forward="false" selection-start-line="103" selection-start-column="8" selection-end-line="103" selection-end-column="8" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SpriteViewerState.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/dev/flash/tilegame/states/SpriteViewerState.java">
+      <file leaf-file-name="EntityManager.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/dev/flash/tilegame/entities/EntityManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="595">
-              <caret line="41" column="17" lean-forward="false" selection-start-line="41" selection-start-column="17" selection-end-line="41" selection-end-column="17" />
+            <state relative-caret-position="272">
+              <caret line="132" column="12" lean-forward="false" selection-start-line="132" selection-start-column="12" selection-end-line="132" selection-end-column="12" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SpriteViewerWorld.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/dev/flash/tilegame/worlds/SpriteViewerWorld.java">
+      <file leaf-file-name="Unit.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/dev/flash/tilegame/entities/units/Unit.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="850">
+            <state relative-caret-position="189">
+              <caret line="370" column="0" lean-forward="false" selection-start-line="370" selection-start-column="0" selection-end-line="370" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UIRectangleContainer.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/dev/flash/tilegame/ui/objects/UIRectangleContainer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="163">
               <caret line="56" column="4" lean-forward="false" selection-start-line="56" selection-start-column="4" selection-end-line="56" selection-end-column="4" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MenuState.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/dev/flash/tilegame/states/MenuState.java">
+      <file leaf-file-name="Creature.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/dev/flash/tilegame/entities/units/creatures/Creature.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="27" column="24" lean-forward="false" selection-start-line="27" selection-start-column="24" selection-end-line="27" selection-end-column="24" />
+            <state relative-caret-position="28">
+              <caret line="217" column="0" lean-forward="false" selection-start-line="217" selection-start-column="0" selection-end-line="217" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UnitControlledState.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/dev/flash/tilegame/entities/units/UnitControlledState.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="306">
+              <caret line="20" column="4" lean-forward="false" selection-start-line="20" selection-start-column="4" selection-end-line="20" selection-end-column="4" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UnitCombatState.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/dev/flash/tilegame/entities/units/UnitCombatState.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="42">
+              <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AStar.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/dev/flash/tilegame/pathfinding/AStar.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="47" column="26" lean-forward="false" selection-start-line="47" selection-start-column="26" selection-end-line="47" selection-end-column="26" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GameState.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/dev/flash/tilegame/states/GameState.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="425">
+              <caret line="28" column="4" lean-forward="false" selection-start-line="28" selection-start-column="4" selection-end-line="28" selection-end-column="4" />
               <folding>
                 <element signature="e#481#482#0" expanded="true" />
-                <element signature="e#508#509#0" expanded="true" />
+                <element signature="e#503#504#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserInterface.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/dev/flash/tilegame/ui/UserInterface.java">
+      <file leaf-file-name="Wizard.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/dev/flash/tilegame/entities/units/creatures/Wizard.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="37" column="53" lean-forward="false" selection-start-line="37" selection-start-column="8" selection-end-line="37" selection-end-column="53" />
-              <folding>
-                <element signature="e#968#969#0" expanded="true" />
-                <element signature="e#1020#1021#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="153">
+              <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="WorldEditorState.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/dev/flash/tilegame/states/WorldEditorState.java">
+      <file leaf-file-name="Barracks.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/dev/flash/tilegame/entities/units/buildings/Barracks.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="NewAStar.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/dev/flash/tilegame/pathfinding/NewAStar.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="197">
+              <caret line="48" column="26" lean-forward="false" selection-start-line="48" selection-start-column="26" selection-end-line="48" selection-end-column="26" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Wall.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/dev/flash/tilegame/entities/units/buildings/Wall.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Building.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/dev/flash/tilegame/entities/units/buildings/Building.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="68">
-              <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+              <caret line="9" column="22" lean-forward="false" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MageTower.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/dev/flash/tilegame/entities/units/buildings/MageTower.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Tower.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/dev/flash/tilegame/entities/units/buildings/Tower.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Mudcrab.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/dev/flash/tilegame/entities/units/creatures/Mudcrab.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Ogre.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/dev/flash/tilegame/entities/units/creatures/Ogre.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Zombie.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/dev/flash/tilegame/entities/units/creatures/Zombie.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Archer.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/dev/flash/tilegame/entities/units/creatures/Archer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Builder.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/dev/flash/tilegame/entities/units/creatures/Builder.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="986">
+              <caret line="116" column="0" lean-forward="false" selection-start-line="116" selection-start-column="0" selection-end-line="116" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UIObject.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/dev/flash/tilegame/ui/objects/UIObject.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-352">
+              <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -151,10 +478,35 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/dev/flash/tilegame/rules/RuleManager.java" />
-        <option value="$PROJECT_DIR$/src/dev/flash/tilegame/worlds/World.java" />
         <option value="$PROJECT_DIR$/src/dev/flash/tilegame/ui/objects/UIManager.java" />
         <option value="$PROJECT_DIR$/src/dev/flash/tilegame/Launcher.java" />
         <option value="$PROJECT_DIR$/src/dev/flash/tilegame/gfx/Assets.java" />
+        <option value="$PROJECT_DIR$/src/dev/flash/tilegame/states/SpriteViewerState.java" />
+        <option value="$PROJECT_DIR$/src/dev/flash/tilegame/Game.java" />
+        <option value="$PROJECT_DIR$/src/dev/flash/tilegame/ui/objects/UIObject.java" />
+        <option value="$PROJECT_DIR$/src/dev/flash/tilegame/worlds/World.java" />
+        <option value="$PROJECT_DIR$/src/dev/flash/tilegame/entities/EntityManager.java" />
+        <option value="$PROJECT_DIR$/src/dev/flash/tilegame/entities/units/UnitControlledState.java" />
+        <option value="$PROJECT_DIR$/src/dev/flash/tilegame/pathfinding/AStar.java" />
+        <option value="$PROJECT_DIR$/src/dev/flash/tilegame/ui/UserInterface.java" />
+        <option value="$PROJECT_DIR$/src/dev/flash/tilegame/Handler.java" />
+        <option value="$PROJECT_DIR$/src/dev/flash/tilegame/worlds/WorldEditor.java" />
+        <option value="$PROJECT_DIR$/src/dev/flash/tilegame/entities/units/Unit.java" />
+        <option value="$PROJECT_DIR$/src/dev/flash/tilegame/ui/objects/UIRectangleContainer.java" />
+        <option value="$PROJECT_DIR$/src/dev/flash/tilegame/entities/units/creatures/Creature.java" />
+        <option value="$PROJECT_DIR$/src/dev/flash/tilegame/states/State.java" />
+        <option value="$PROJECT_DIR$/src/dev/flash/tilegame/states/GameState.java" />
+        <option value="$PROJECT_DIR$/src/dev/flash/tilegame/entities/units/creatures/Wizard.java" />
+        <option value="$PROJECT_DIR$/src/dev/flash/tilegame/entities/units/creatures/Mudcrab.java" />
+        <option value="$PROJECT_DIR$/src/dev/flash/tilegame/entities/units/creatures/Archer.java" />
+        <option value="$PROJECT_DIR$/src/dev/flash/tilegame/entities/units/creatures/Ogre.java" />
+        <option value="$PROJECT_DIR$/src/dev/flash/tilegame/entities/units/creatures/Zombie.java" />
+        <option value="$PROJECT_DIR$/src/dev/flash/tilegame/entities/units/buildings/Wall.java" />
+        <option value="$PROJECT_DIR$/src/dev/flash/tilegame/entities/units/buildings/MageTower.java" />
+        <option value="$PROJECT_DIR$/src/dev/flash/tilegame/entities/units/buildings/Tower.java" />
+        <option value="$PROJECT_DIR$/src/dev/flash/tilegame/entities/units/creatures/Builder.java" />
+        <option value="$PROJECT_DIR$/src/dev/flash/tilegame/entities/units/buildings/Barracks.java" />
+        <option value="$PROJECT_DIR$/src/dev/flash/tilegame/pathfinding/NewAStar.java" />
       </list>
     </option>
   </component>
@@ -216,6 +568,53 @@
               <item name="Revisioned-TileGame" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="tilegame" type="462c0819:PsiDirectoryNode" />
+              <item name="entities" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Revisioned-TileGame" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Revisioned-TileGame" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="tilegame" type="462c0819:PsiDirectoryNode" />
+              <item name="entities" type="462c0819:PsiDirectoryNode" />
+              <item name="units" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Revisioned-TileGame" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Revisioned-TileGame" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="tilegame" type="462c0819:PsiDirectoryNode" />
+              <item name="entities" type="462c0819:PsiDirectoryNode" />
+              <item name="units" type="462c0819:PsiDirectoryNode" />
+              <item name="buildings" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Revisioned-TileGame" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Revisioned-TileGame" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="tilegame" type="462c0819:PsiDirectoryNode" />
+              <item name="entities" type="462c0819:PsiDirectoryNode" />
+              <item name="units" type="462c0819:PsiDirectoryNode" />
+              <item name="creatures" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Revisioned-TileGame" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Revisioned-TileGame" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="tilegame" type="462c0819:PsiDirectoryNode" />
+              <item name="input" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Revisioned-TileGame" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Revisioned-TileGame" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="tilegame" type="462c0819:PsiDirectoryNode" />
+              <item name="menu" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Revisioned-TileGame" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Revisioned-TileGame" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="tilegame" type="462c0819:PsiDirectoryNode" />
               <item name="pathfinding" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -237,15 +636,35 @@
               <item name="Revisioned-TileGame" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="tilegame" type="462c0819:PsiDirectoryNode" />
-              <item name="ui" type="462c0819:PsiDirectoryNode" />
+              <item name="timers" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Revisioned-TileGame" type="b2602c69:ProjectViewProjectNode" />
               <item name="Revisioned-TileGame" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="tilegame" type="462c0819:PsiDirectoryNode" />
-              <item name="ui" type="462c0819:PsiDirectoryNode" />
               <item name="objects" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Revisioned-TileGame" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Revisioned-TileGame" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="tilegame" type="462c0819:PsiDirectoryNode" />
+              <item name="utils" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Revisioned-TileGame" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Revisioned-TileGame" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="tilegame" type="462c0819:PsiDirectoryNode" />
+              <item name="waves" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Revisioned-TileGame" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Revisioned-TileGame" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="tilegame" type="462c0819:PsiDirectoryNode" />
+              <item name="worlds" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -392,12 +811,12 @@
       <workItem from="1510563136286" duration="2795000" />
       <workItem from="1510811139709" duration="605000" />
       <workItem from="1510817904949" duration="25000" />
-      <workItem from="1510822514792" duration="703000" />
+      <workItem from="1510822514792" duration="2244000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="19376000" />
+    <option name="totallyTimeSpent" value="20917000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -405,7 +824,7 @@
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32934782" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -471,7 +890,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="16" column="13" lean-forward="false" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-          <folding />
+          <folding>
+            <element signature="e#717#718#0" expanded="true" />
+            <element signature="e#753#754#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -479,7 +901,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1632">
           <caret line="110" column="17" lean-forward="false" selection-start-line="110" selection-start-column="17" selection-end-line="110" selection-end-column="17" />
-          <folding />
+          <folding>
+            <element signature="e#3609#3610#0" expanded="true" />
+            <element signature="e#3635#3636#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -503,10 +928,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
           <caret line="27" column="24" lean-forward="false" selection-start-line="27" selection-start-column="24" selection-end-line="27" selection-end-column="24" />
-          <folding>
-            <element signature="e#481#482#0" expanded="true" />
-            <element signature="e#508#509#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -514,10 +936,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="510">
           <caret line="37" column="53" lean-forward="false" selection-start-line="37" selection-start-column="8" selection-end-line="37" selection-end-column="53" />
-          <folding>
-            <element signature="e#968#969#0" expanded="true" />
-            <element signature="e#1020#1021#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -565,7 +984,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="16" column="13" lean-forward="false" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-          <folding />
+          <folding>
+            <element signature="e#717#718#0" expanded="true" />
+            <element signature="e#753#754#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -573,7 +995,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1632">
           <caret line="110" column="17" lean-forward="false" selection-start-line="110" selection-start-column="17" selection-end-line="110" selection-end-column="17" />
-          <folding />
+          <folding>
+            <element signature="e#3609#3610#0" expanded="true" />
+            <element signature="e#3635#3636#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -597,10 +1022,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
           <caret line="27" column="24" lean-forward="false" selection-start-line="27" selection-start-column="24" selection-end-line="27" selection-end-column="24" />
-          <folding>
-            <element signature="e#481#482#0" expanded="true" />
-            <element signature="e#508#509#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -608,10 +1030,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="510">
           <caret line="37" column="53" lean-forward="false" selection-start-line="37" selection-start-column="8" selection-end-line="37" selection-end-column="53" />
-          <folding>
-            <element signature="e#968#969#0" expanded="true" />
-            <element signature="e#1020#1021#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -659,7 +1078,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="16" column="13" lean-forward="false" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-          <folding />
+          <folding>
+            <element signature="e#717#718#0" expanded="true" />
+            <element signature="e#753#754#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -667,7 +1089,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1632">
           <caret line="110" column="17" lean-forward="false" selection-start-line="110" selection-start-column="17" selection-end-line="110" selection-end-column="17" />
-          <folding />
+          <folding>
+            <element signature="e#3609#3610#0" expanded="true" />
+            <element signature="e#3635#3636#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -691,10 +1116,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
           <caret line="27" column="24" lean-forward="false" selection-start-line="27" selection-start-column="24" selection-end-line="27" selection-end-column="24" />
-          <folding>
-            <element signature="e#481#482#0" expanded="true" />
-            <element signature="e#508#509#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -702,10 +1124,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="510">
           <caret line="37" column="53" lean-forward="false" selection-start-line="37" selection-start-column="8" selection-end-line="37" selection-end-column="53" />
-          <folding>
-            <element signature="e#968#969#0" expanded="true" />
-            <element signature="e#1020#1021#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -753,7 +1172,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="16" column="13" lean-forward="false" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-          <folding />
+          <folding>
+            <element signature="e#717#718#0" expanded="true" />
+            <element signature="e#753#754#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -761,7 +1183,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1632">
           <caret line="110" column="17" lean-forward="false" selection-start-line="110" selection-start-column="17" selection-end-line="110" selection-end-column="17" />
-          <folding />
+          <folding>
+            <element signature="e#3609#3610#0" expanded="true" />
+            <element signature="e#3635#3636#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -777,10 +1202,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
           <caret line="27" column="24" lean-forward="false" selection-start-line="27" selection-start-column="24" selection-end-line="27" selection-end-column="24" />
-          <folding>
-            <element signature="e#481#482#0" expanded="true" />
-            <element signature="e#508#509#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -788,10 +1210,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="510">
           <caret line="37" column="53" lean-forward="true" selection-start-line="37" selection-start-column="8" selection-end-line="37" selection-end-column="53" />
-          <folding>
-            <element signature="e#968#969#0" expanded="true" />
-            <element signature="e#1020#1021#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -825,38 +1244,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/dev/flash/tilegame/entities/EntityManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-184">
-          <caret line="49" column="16" lean-forward="false" selection-start-line="49" selection-start-column="16" selection-end-line="49" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/dev/flash/tilegame/pathfinding/AStar.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/dev/flash/tilegame/ui/objects/UIManager.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="425">
           <caret line="44" column="36" lean-forward="true" selection-start-line="44" selection-start-column="36" selection-end-line="44" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/dev/flash/tilegame/ui/GameUserInterface.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="39" column="8" lean-forward="true" selection-start-line="39" selection-start-column="8" selection-end-line="39" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/dev/flash/tilegame/states/State.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="8" column="22" lean-forward="false" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
         </state>
       </provider>
     </entry>
@@ -868,78 +1259,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/dev/flash/tilegame/worlds/World.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="377">
-          <caret line="171" column="31" lean-forward="false" selection-start-line="171" selection-start-column="8" selection-end-line="171" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/dev/flash/tilegame/states/GameState.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="42" column="28" lean-forward="true" selection-start-line="42" selection-start-column="8" selection-end-line="42" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/dev/flash/tilegame/Game.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1632">
-          <caret line="110" column="17" lean-forward="false" selection-start-line="110" selection-start-column="17" selection-end-line="110" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/dev/flash/tilegame/states/SpriteViewerState.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="595">
-          <caret line="41" column="17" lean-forward="false" selection-start-line="41" selection-start-column="17" selection-end-line="41" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/dev/flash/tilegame/states/MenuState.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="27" column="24" lean-forward="false" selection-start-line="27" selection-start-column="24" selection-end-line="27" selection-end-column="24" />
-          <folding>
-            <element signature="e#481#482#0" expanded="true" />
-            <element signature="e#508#509#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/dev/flash/tilegame/ui/UserInterface.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="37" column="53" lean-forward="false" selection-start-line="37" selection-start-column="8" selection-end-line="37" selection-end-column="53" />
-          <folding>
-            <element signature="e#968#969#0" expanded="true" />
-            <element signature="e#1020#1021#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/dev/flash/tilegame/states/WorldEditorState.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
-          <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/dev/flash/tilegame/worlds/SpriteViewerWorld.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="850">
-          <caret line="56" column="4" lean-forward="false" selection-start-line="56" selection-start-column="4" selection-end-line="56" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/dev/flash/tilegame/Launcher.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="50" lean-forward="false" selection-start-line="5" selection-start-column="50" selection-end-line="5" selection-end-column="50" />
+          <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
           <folding />
         </state>
       </provider>
@@ -960,18 +1283,286 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/dev/flash/tilegame/Handler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="16" column="13" lean-forward="false" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/dev/flash/tilegame/gfx/ImageLoader.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dev/flash/tilegame/Launcher.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="50" lean-forward="false" selection-start-line="5" selection-start-column="50" selection-end-line="5" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dev/flash/tilegame/states/MenuState.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="26" column="24" lean-forward="false" selection-start-line="26" selection-start-column="24" selection-end-line="26" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dev/flash/tilegame/states/SpriteViewerState.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="24" column="24" lean-forward="true" selection-start-line="24" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dev/flash/tilegame/Game.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="314">
+          <caret line="185" column="5" lean-forward="false" selection-start-line="185" selection-start-column="5" selection-end-line="185" selection-end-column="5" />
+          <folding>
+            <element signature="e#3609#3610#0" expanded="true" />
+            <element signature="e#3635#3636#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dev/flash/tilegame/ui/objects/UIObject.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-352">
+          <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dev/flash/tilegame/worlds/SpriteViewerWorld.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="197">
+          <caret line="161" column="26" lean-forward="false" selection-start-line="161" selection-start-column="26" selection-end-line="161" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dev/flash/tilegame/worlds/World.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="103" column="8" lean-forward="false" selection-start-line="103" selection-start-column="8" selection-end-line="103" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dev/flash/tilegame/entities/EntityManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="132" column="12" lean-forward="false" selection-start-line="132" selection-start-column="12" selection-end-line="132" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dev/flash/tilegame/entities/units/UnitControlledState.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="20" column="4" lean-forward="false" selection-start-line="20" selection-start-column="4" selection-end-line="20" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dev/flash/tilegame/entities/units/UnitCombatState.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="42">
+          <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dev/flash/tilegame/pathfinding/AStar.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="47" column="26" lean-forward="false" selection-start-line="47" selection-start-column="26" selection-end-line="47" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dev/flash/tilegame/ui/UserInterface.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="25">
+          <caret line="52" column="12" lean-forward="false" selection-start-line="52" selection-start-column="12" selection-end-line="52" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dev/flash/tilegame/ui/GameUserInterface.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-187">
+          <caret line="14" column="39" lean-forward="false" selection-start-line="14" selection-start-column="39" selection-end-line="14" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dev/flash/tilegame/Handler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="719">
+          <caret line="75" column="0" lean-forward="false" selection-start-line="75" selection-start-column="0" selection-end-line="75" selection-end-column="0" />
+          <folding>
+            <element signature="e#717#718#0" expanded="true" />
+            <element signature="e#753#754#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dev/flash/tilegame/worlds/WorldEditor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dev/flash/tilegame/entities/units/Unit.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="370" column="0" lean-forward="false" selection-start-line="370" selection-start-column="0" selection-end-line="370" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dev/flash/tilegame/ui/objects/UIRectangleContainer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="163">
+          <caret line="56" column="4" lean-forward="false" selection-start-line="56" selection-start-column="4" selection-end-line="56" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dev/flash/tilegame/input/InputManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="14" column="23" lean-forward="false" selection-start-line="14" selection-start-column="23" selection-end-line="14" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dev/flash/tilegame/states/State.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding>
+            <element signature="e#406#407#0" expanded="true" />
+            <element signature="e#433#434#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dev/flash/tilegame/states/GameState.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="28" column="4" lean-forward="false" selection-start-line="28" selection-start-column="4" selection-end-line="28" selection-end-column="4" />
+          <folding>
+            <element signature="e#481#482#0" expanded="true" />
+            <element signature="e#503#504#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dev/flash/tilegame/entities/units/creatures/Archer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dev/flash/tilegame/entities/units/creatures/Creature.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="28">
+          <caret line="217" column="0" lean-forward="false" selection-start-line="217" selection-start-column="0" selection-end-line="217" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dev/flash/tilegame/entities/units/creatures/Mudcrab.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dev/flash/tilegame/entities/units/creatures/Ogre.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dev/flash/tilegame/entities/units/creatures/Zombie.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dev/flash/tilegame/entities/units/creatures/Wizard.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dev/flash/tilegame/entities/units/buildings/Building.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="9" column="22" lean-forward="false" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dev/flash/tilegame/entities/units/buildings/MageTower.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dev/flash/tilegame/entities/units/buildings/Tower.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dev/flash/tilegame/entities/units/buildings/Wall.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dev/flash/tilegame/entities/units/creatures/Builder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="986">
+          <caret line="116" column="0" lean-forward="false" selection-start-line="116" selection-start-column="0" selection-end-line="116" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dev/flash/tilegame/entities/units/buildings/Barracks.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dev/flash/tilegame/pathfinding/NewAStar.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="197">
+          <caret line="48" column="26" lean-forward="false" selection-start-line="48" selection-start-column="26" selection-end-line="48" selection-end-column="26" />
           <folding />
         </state>
       </provider>

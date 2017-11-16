@@ -11,7 +11,6 @@ public class Zombie extends Creature {
 	public Zombie(Handler handler, float x, float y, int team) {
 		super(handler, x, y, Creature.DEFAULT_WIDTH, Creature.DEFAULT_HEIGHT, team);
 		
-		uiCommandBox = handler.getGameUserInterface().getUiZombieCommandBox();
 	}
 	
 	@Override

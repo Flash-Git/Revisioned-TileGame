@@ -24,7 +24,6 @@ public abstract class UIObject {
 		this.width = width;
 		this.height = height;
 		bounds = new Rectangle((int) x, (int) y, width, height);
-		mouseManager = handler.getMouseManager();
 	}
 	
 	public abstract void tick();

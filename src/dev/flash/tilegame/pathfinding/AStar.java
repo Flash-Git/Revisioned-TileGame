@@ -45,7 +45,7 @@ public class AStar {
 			n.setWeight(0);
 		}
 		
-		int checkNum = handler.getRuleManager().getRule("checkNum").getIntVar();
+		int checkNum = 250;
 		ArrayList<Node> open = new ArrayList<Node>();//open list of Nodes (to search)
 		ArrayList<Node> closed = new ArrayList<Node>();//closed list of Nodes (searched)
 		

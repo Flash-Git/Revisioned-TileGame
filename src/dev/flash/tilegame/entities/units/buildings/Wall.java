@@ -11,7 +11,6 @@ public class Wall extends Building {
 	public Wall(Handler handler, float x, float y, int team) {
 		super(handler, x, y, Building.DEFAULT_WIDTH, Building.DEFAULT_HEIGHT, team);
 		
-		uiCommandBox = handler.getGameUserInterface().getUiWallCommandBox();
 	}
 	
 	@Override

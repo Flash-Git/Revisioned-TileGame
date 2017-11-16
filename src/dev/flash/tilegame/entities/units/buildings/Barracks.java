@@ -13,7 +13,6 @@ public class Barracks extends Building {
 	public Barracks(Handler handler, float x, float y, int team) {
 		super(handler, x, y, Building.DEFAULT_WIDTH * 2, (int) (Building.DEFAULT_HEIGHT * 1.5), team);
 		
-		uiCommandBox = handler.getGameUserInterface().getUiBarracksCommandBox();
 	}
 	
 	@Override

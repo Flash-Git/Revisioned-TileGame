@@ -12,7 +12,6 @@ public class MageTower extends Building {
 	public MageTower(Handler handler, float x, float y, int team) {
 		super(handler, x, y, Building.DEFAULT_WIDTH, Building.DEFAULT_HEIGHT * 2, team);
 		
-		uiCommandBox = handler.getGameUserInterface().getUiMagetowerCommandBox();
 	}
 	
 	@Override

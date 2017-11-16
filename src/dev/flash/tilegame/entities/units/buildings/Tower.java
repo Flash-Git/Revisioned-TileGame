@@ -12,7 +12,6 @@ public class Tower extends Building {
 	public Tower(Handler handler, float x, float y, int team) {
 		super(handler, x, y, Building.DEFAULT_WIDTH, Building.DEFAULT_HEIGHT, team);
 		
-		uiCommandBox = handler.getGameUserInterface().getUiTowerCommandBox();
 	}
 	
 	@Override

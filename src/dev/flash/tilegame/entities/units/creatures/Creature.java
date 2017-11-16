@@ -215,7 +215,6 @@ public abstract class Creature extends Unit {
 		if(team == 1) {
 			return;
 		} else {
-			handler.getWorld().setGold(handler.getWorld().getGold() + 4 + level);
 		}
 	}
 	

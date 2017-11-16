@@ -54,21 +54,7 @@ public class UIRectangleContainer extends UIObject {
 	}
 	
 	public void onMouseMove(MouseEvent e) {
-		if(bounds.contains(e.getX(), e.getY())) {
-			if(hovering == false) {
-				oldCursor = handler.getMouseManager().getUIManager().getActiveCursor();
-			}
-			hovering = true;
-			for(UIObject o : objects) {
-				o.onMouseMove(e);
-			}
-			handler.getMouseManager().getUIManager().setActiveCursor(handler.getUserInterface().getDefaultCursor());
-		} else {
-			if(hovering == true) {
-				handler.getMouseManager().getUIManager().setActiveCursor(oldCursor);
-			}
-			hovering = false;
-		}
+	
 		
 	}
 	

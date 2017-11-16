@@ -2,22 +2,14 @@ package dev.flash.tilegame.worlds;
 
 import dev.flash.tilegame.Handler;
 import dev.flash.tilegame.entities.EntityManager;
-import dev.flash.tilegame.entities.EntitySorter;
-import dev.flash.tilegame.entities.projectiles.Projectile;
 import dev.flash.tilegame.entities.units.buildings.Barracks;
 import dev.flash.tilegame.entities.units.buildings.Tower;
 import dev.flash.tilegame.entities.units.creatures.Builder;
-import dev.flash.tilegame.entities.units.creatures.Creature;
 import dev.flash.tilegame.entities.units.creatures.Mudcrab;
-import dev.flash.tilegame.input.KeyManager;
 import dev.flash.tilegame.pathfinding.Node;
-import dev.flash.tilegame.rules.Rule;
-import dev.flash.tilegame.rules.RuleManager;
 import dev.flash.tilegame.tiles.*;
-import dev.flash.tilegame.timers.Timer;
 import dev.flash.tilegame.timers.TimerManager;
 import dev.flash.tilegame.utils.Utils;
-import dev.flash.tilegame.waves.Wave;
 
 import java.awt.*;
 import java.util.ArrayList;
@@ -27,23 +19,18 @@ public class World {
 	private Handler handler;
 	private int width, height;
 	private int spawnX, spawnY;
-	private int gold;
 	
 	private int[][] tiles;
 	
-	int waveIncr;
-	
+
 	//Managers
 	private EntityManager entityManager;
 	private ChunkManager chunkManager;
 	
 	private TileManager tileManager;
-	private RuleManager ruleManager;
-	private KeyManager keyManager;//is it a good idea to import rather just going through handler?
 	private TimerManager timerManager;
-	private Timer goldGen;
 	
-	//private boolean loading = false;//TODO
+	
 	
 	public static ArrayList<Chunk> chunks = new ArrayList<>();
 	
@@ -58,14 +45,10 @@ public class World {
 		chunkManager = new ChunkManager(handler);
 		
 		timerManager = handler.getTimerManager();
-		ruleManager = handler.getRuleManager();//better than just using handler.xyz every time?
-		keyManager = handler.getKeyManager();
 		
 		//	loading=true;
 		loadWorld(path);
 		//	loading=false;
-		
-		
 	}
 	
 	//Loads a world based on text file
@@ -113,36 +96,12 @@ public class World {
 		
 		Mudcrab crab = new Mudcrab(handler, 27 * 32, 5 * 32, 1);
 		entityManager.addToAddList(crab);
-		
-		setGold(10000);
-		handler.getTimerManager().addToAddList(goldGen = new Timer(5000));
-		
-		//TODO temp
-		wave = new Wave(handler, 1, 50);
-		waveIncr = 1;
 	}
 	
-	//TODO temp
-	private Wave wave;
-	
 	public void tick(double delta) {
-		Rule r = ruleManager.getRule("paused");
-		if(r.getBoolVar() == false) {
-			entityManager.tick(delta);
-			timerManager.tick(delta);
-//			//TODO temp
-			wave.tick();
-			if(wave.endTimer.isDone()) {
-				waveIncr += 1;
-				wave = new Wave(handler, waveIncr, 3);
-			}
-			if(goldGen.isDone()) {
-				gold += 5;
-			}
-		} else {
-			timerManager.globalTick(delta);
-		}
-		getInput();
+		entityManager.tick(delta);
+		timerManager.tick(delta);
+		
 	}
 	
 	public Tile getTile(int x, int y) {
@@ -172,58 +131,6 @@ public class World {
 		entityManager.render(g);
 	}
 	
-	private void getInput() {
-		//moving camera
-		if(entityManager.getControlled() == null) {
-			boolean up = handler.getKeyManager().up;
-			boolean down = handler.getKeyManager().down;
-			boolean left = handler.getKeyManager().left;
-			boolean right = handler.getKeyManager().right;
-			
-			int speed = 5;
-			if(up) {
-				handler.getGameCamera().move(0, -speed);
-			}
-			if(down) {
-				handler.getGameCamera().move(0, speed);
-			}
-			if(left) {
-				handler.getGameCamera().move(-speed, 0);
-			}
-			if(right) {
-				handler.getGameCamera().move(speed, 0);
-			}
-		}
-		
-		//keys
-		if(keyManager.c) {
-			EntitySorter sorter = new EntitySorter();
-			for(Creature e : entityManager.getEntitySorter().creatures) {
-				e.accept(sorter);
-			}
-			for(Projectile e : entityManager.getEntitySorter().projectiles) {
-				e.accept(sorter);
-			}
-			entityManager.removeList(sorter.entities);
-		}
-		
-		Rule r;
-		
-		if(keyManager.p) {
-			r = ruleManager.getRule("paused");
-			r.swapBoolVar();
-		}
-		
-		if(keyManager.b) {
-			r = ruleManager.getRule("bounds");
-			r.swapBoolVar();
-		}
-		
-		if(keyManager.e) {
-			r = ruleManager.getRule("entity collision");
-			r.swapBoolVar();
-		}
-	}
 	
 	//Getters and setters
 	
@@ -261,13 +168,5 @@ public class World {
 	
 	public int getHeight() {
 		return height;
-	}
-	
-	public int getGold() {
-		return gold;
-	}
-	
-	public void setGold(int gold) {
-		this.gold = gold;
 	}
 }

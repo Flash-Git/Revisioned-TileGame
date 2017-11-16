@@ -126,15 +126,11 @@ public class EntityManager {
 				g.setColor(Color.BLUE);
 				g.drawOval((int) (e.getX() - e.width / 2 - xCamOffset), (int) (e.getY() - e.height / 2 - yCamOffset), e.getWidth() * 2, e.getHeight() * 2);
 			}
-			Rule r = handler.getRuleManager().getRule("bounds");
-			if(r.getBoolVar() == false) {
-				continue;
-			} else if(r.getBoolVar() == true) {
-				
+			
 				g.setColor(Color.blue);
 				
 				g.fillRect(e.getCollisionBounds(0, 0).x - (int) xCamOffset, e.getCollisionBounds(0, 0).y - (int) yCamOffset, e.getCollisionBounds(0, 0).width, e.getCollisionBounds(0, 0).height);
-			}
+			
 		}
 	}
 	
