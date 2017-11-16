@@ -7,7 +7,6 @@ import java.awt.*;
 public abstract class State {
 	
 	
-	
 	private static State currentState = null;
 	
 	//Class

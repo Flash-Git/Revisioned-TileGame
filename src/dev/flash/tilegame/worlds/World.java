@@ -22,14 +22,13 @@ public class World {
 	
 	private int[][] tiles;
 	
-
+	
 	//Managers
 	private EntityManager entityManager;
 	private ChunkManager chunkManager;
 	
 	private TileManager tileManager;
 	private TimerManager timerManager;
-	
 	
 	
 	public static ArrayList<Chunk> chunks = new ArrayList<>();

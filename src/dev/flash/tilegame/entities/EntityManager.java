@@ -6,7 +6,6 @@ import dev.flash.tilegame.entities.statics.StaticEntity;
 import dev.flash.tilegame.entities.units.Unit;
 import dev.flash.tilegame.entities.units.buildings.Building;
 import dev.flash.tilegame.entities.units.creatures.Creature;
-import dev.flash.tilegame.rules.Rule;
 import dev.flash.tilegame.tiles.Chunk;
 
 import java.awt.*;
@@ -127,9 +126,9 @@ public class EntityManager {
 				g.drawOval((int) (e.getX() - e.width / 2 - xCamOffset), (int) (e.getY() - e.height / 2 - yCamOffset), e.getWidth() * 2, e.getHeight() * 2);
 			}
 			
-				g.setColor(Color.blue);
-				
-				g.fillRect(e.getCollisionBounds(0, 0).x - (int) xCamOffset, e.getCollisionBounds(0, 0).y - (int) yCamOffset, e.getCollisionBounds(0, 0).width, e.getCollisionBounds(0, 0).height);
+			g.setColor(Color.blue);
+			
+			g.fillRect(e.getCollisionBounds(0, 0).x - (int) xCamOffset, e.getCollisionBounds(0, 0).y - (int) yCamOffset, e.getCollisionBounds(0, 0).width, e.getCollisionBounds(0, 0).height);
 			
 		}
 	}

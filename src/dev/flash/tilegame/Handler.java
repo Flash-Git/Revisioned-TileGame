@@ -21,12 +21,10 @@ public class Handler {
 		return game.getGameCamera();
 	}
 	
-
 	
 	public EntityManager getEntityManager() {
 		return world.getEntityManager();
 	}
-	
 	
 	
 	public ChunkManager getChunkManager() {
@@ -73,6 +71,5 @@ public class Handler {
 		this.menu = menu;
 	}
 	
-
 	
 }

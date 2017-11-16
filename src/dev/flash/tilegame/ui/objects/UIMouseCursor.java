@@ -25,12 +25,7 @@ public class UIMouseCursor extends UIObject {
 	public void tick() {
 		bounds.setBounds((int) x, (int) y, width, height);
 		animCursor.tick();
-		if(mouseManager.isLeftPressed()) {
-			pressed(1);
-		}
-		if(mouseManager.isRightPressed()) {
-			pressed(3);
-		}
+		
 		doTick();
 	}
 	

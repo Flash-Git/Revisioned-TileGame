@@ -16,7 +16,6 @@ public class UnitControlledState extends UnitState {
 	}
 	
 	
-	
 	private void setVelocity() {
 	
 		

@@ -1,7 +1,6 @@
 package dev.flash.tilegame.ui.objects;
 
 import dev.flash.tilegame.Handler;
-import dev.flash.tilegame.input.MouseManager;
 
 import java.awt.*;
 import java.awt.event.MouseEvent;
@@ -14,7 +13,6 @@ public abstract class UIObject {
 	protected int width, height;
 	protected Rectangle bounds;
 	protected boolean hovering = false;
-	protected MouseManager mouseManager;
 	protected String name;
 	
 	public UIObject(Handler handler, float x, float y, int width, int height) {
